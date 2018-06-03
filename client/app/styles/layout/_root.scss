@@ -1,0 +1,153 @@
+html {
+  -webkit-font-smoothing: antialiased;
+  height: 100%;
+  font-family: $font-family-nunito;
+  font-size: 1rem;
+  color: $dark-color;
+}
+
+body {
+  min-height: 100%;
+  font-family: $font-family-nunito;
+  font-size: 16px;
+  line-height: 30px;
+  letter-spacing: 0.3px;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: $dark-color;
+  &.disabled {
+    pointer-events: none;
+  }
+}
+h1 {
+  font-family: $font-family-nunito;
+  font-size: 35px;
+  color: $dark-color;
+  text-transform: uppercase;
+}
+h2 {
+  font-family: $font-family-nunito;
+  font-size: 35px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 0.6px;
+  color: $dark-color;
+  @include sm-only {
+    font-size: 28px;
+  }
+}
+h3 {
+  font-family: $font-family-nunito;
+  font-size: 22px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 0.4px;
+  color: $dark-color;
+}
+p {
+  font-family: $font-family-nunito;
+  font-size: 16px;
+  line-height: 30px;
+  letter-spacing: 0.3px;
+}
+
+.container {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.no-padding {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+.join {
+  border-radius: 0;
+  border-width: 0;
+  background-image: linear-gradient(73deg, #4f4f4f, #3b3b3b 48%, #000000);
+  font-family: $font-family-nunito;
+  padding: 14px 17px;
+  font-size: 1rem;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 0.5px;
+  text-align: left;
+  margin-left: 20px;
+}
+
+.animated {
+  animation-duration: 0.6s;
+  z-index: 9;
+}
+
+.fadeInUp {
+  -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp;
+}
+.inline-flex {
+  display: inline-flex;
+}
+.justify-content-center {
+  -webkit-box-pack: center !important;
+  -ms-flex-pack: center !important;
+  justify-content: center !important;
+}
+// .row {
+//   @include xs-only {
+//     margin-right: -10px;
+//   }
+// }
+
+.upperCase {
+  text-transform: uppercase;
+}
+
+.invalid-feedback {
+  font-family: $font-ti;
+  font-size: 12px;
+  font-weight: 300;
+  color: $v2-orange;
+}
+
+.row {
+  margin-left: 0;
+  margin-right: 0;
+}
+.col {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+#page {
+  background-color: white;
+  position: relative;
+  min-height: 900px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  .body {
+    flex: 1;
+  }
+
+  .header {
+    .header-title {
+      font-family: $font-ti;
+      font-size: 30px;
+      text-align: left;
+      font-weight: bold;
+      color: $v2-heading;
+    }
+  }
+}

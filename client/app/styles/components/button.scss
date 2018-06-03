@@ -1,0 +1,43 @@
+.button {
+  padding: 6px 15px;
+  background-color: $v2-blue-dark;
+  color: "white";
+  border-radius: 0;
+  display: inline-flex;
+  border: 1px solid $v2-blue-light;
+  justify-content: space-between;
+  &:active {
+    background-color: none;
+    border-color: none;
+  }
+  &:focus {
+    outline: none;
+    box-shadow: none;
+  }
+  &.full-width {
+    width: 100%;
+  }
+  &:hover {
+    background-color: $v2-blue-dark-hover;
+  }
+  &.button-light {
+    background-color: $v2-blue-light;
+  }
+  &.button-icon {
+    padding: 8px 20px;
+  }
+  i {
+    font-size: 24px;
+  }
+  .button-text {
+    font-family: $font-ti;
+    font-size: 16px;
+    font-weight: 600;
+  }
+  .button-left {
+    margin-right: 10px;
+  }
+  .button-right {
+    margin-left: 10px;
+  }
+}

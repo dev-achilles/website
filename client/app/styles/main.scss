@@ -1,0 +1,65 @@
+// *** Node modules
+@import "~sass-mediaqueries/media-queries";
+@import "~bootstrap/scss/bootstrap";
+@import "~react-toastify/scss/main";
+
+$fa-font-path: "../../node_modules/font-awesome/fonts" !default;
+@import "~font-awesome/scss/font-awesome";
+// *** Variables
+@import "variables/app";
+@import "variables/bootstrap";
+@import "variables/typography";
+
+// *** Utilities
+@import "utilities/functions";
+@import "utilities/mixins";
+@import "utilities/grid";
+
+// *** Layout
+@import "layout/root";
+
+// *** Modules
+@import "modules/animations";
+// @import "modules/transitions";
+// *** Landing Components
+@import "components/button";
+@import "components/navigation";
+@import "components/footer";
+@import "components/Landing/intro";
+@import "components/Landing/presale";
+@import "components/Landing/countdown";
+@import "components/Landing/howfar";
+@import "components/Landing/whatis";
+@import "components/Landing/meet";
+@import "components/Landing/howitwork";
+@import "components/Landing/whitepaper";
+@import "components/Landing/roadmap";
+@import "components/Landing/team";
+@import "components/Landing/business";
+@import "components/Landing/subscribe";
+
+// *** Auth components
+@import "components/Auth/auth";
+@import "components/verified";
+
+@import "components/keypair";
+// *** common components
+@import "components/Loading";
+@import "components/preloader";
+@import "components/contact";
+@import "components/alert";
+@import "components/systemalerts";
+@import "components/error";
+@import "components/sidebar";
+@import "components/uploadimage";
+// *** Containers
+// @import 'containers/github';
+
+// *** Routes
+@import "containers/notfound";
+@import "containers/auth";
+@import "containers/verified";
+@import "containers/wallet";
+// @import 'routes/home';
+// @import 'routes/private';
+// @import 'routes/not-found';

@@ -1,0 +1,40 @@
+{
+  "parser": "babel-eslint",
+  "extends": ["react-app", "eslint:recommended", "airbnb", "plugin:redux-saga/recommended"],
+  "plugins": ["react", "flowtype", "redux-saga", "react-redux", "jsx-a11y", "import"],
+  "settings": {
+    "flowtype": {
+      "onlyFilesWithFlowAnnotation": true
+    }
+  },
+  "rules": {
+    "jsx-a11y/href-no-hash": "off",
+    "jsx-a11y/anchor-is-valid": ["warn", { "aspects": ["invalidHref"] }],
+    "no-case-declarations": 0,
+    "react/jsx-no-undef": 0,
+    "semi": [1, "always"],
+    "no-var": 1,
+    "global-require": 0,
+    "no-console": 0,
+    "no-unused-styles": 0,
+    "no-underscore-dangle": 0,
+    "no-unused-expressions": 0,
+    "no-useless-constructor": 0,
+    "react/no-unescaped-entities": 0,
+    "import/named": 2,
+    "import/no-extraneous-dependencies": 0,
+    "react-redux/connect-prefer-named-arguments": 2,
+    "import/prefer-default-export": 0,
+    "import/no-unresolved": 0,
+    "import/extensions": ["off", "never"],
+    "no-param-reassign": 0,
+    "no-unused-vars": 0,
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "react/prefer-stateless-function": 0,
+    "react/prop-types": 0,
+    "function-paren-newline": ["error", { "minItems": 3 }],
+    "no-use-before-define": 0,
+    "import/no-dynamic-require": 0,
+    "import/no-named-as-default": 0
+  }
+}

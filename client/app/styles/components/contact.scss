@@ -1,0 +1,131 @@
+#contact {
+  background: url($image-path+"bg-1-section@2x.png") no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  position: relative;
+  ul,
+  ol {
+    padding: 0px;
+    align-items: center;
+    justify-content: center;
+    @include sm-only {
+      flex-direction: column;
+    }
+    &.contact-info {
+      margin: 0 -30px;
+      padding: 30px 0;
+      display: flex;
+      @include sm-only {
+        padding: 10px 0;
+      }
+      li {
+        margin: 0 10px;
+        list-style: none;
+        .fa {
+          background-color: $dark-color;
+          font-size: 20px;
+          line-height: 38px;
+          width: 38px;
+          text-align: center;
+          color: #fff;
+          border-radius: 50%;
+          margin-right: 15px;
+          @include sm-only {
+            margin-bottom: 15px;
+          }
+        }
+        @include sm-only {
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          display: flex;
+          margin: 0 0 20px;
+        }
+      }
+    }
+  }
+  .form-message {
+    .form-results {
+      display: none;
+      &.show-alert {
+        display: block;
+        animation: fadeIn 2s linear;
+      }
+      &.hide-alert {
+        animation: hideAlert 2s linear;
+      }
+    }
+
+    .input-field {
+      margin-bottom: 20px;
+      position: relative;
+      .input-line {
+        border-radius: 0;
+        box-shadow: none;
+        position: relative;
+        line-height: 46px;
+        z-index: 2;
+        background: transparent;
+        border: none;
+        width: 100%;
+        text-align: center;
+        color: $dark-color;
+        border-bottom: 1px solid $dark-color;
+        margin-top: 8px;
+        outline: none;
+        border-bottom-color: $dark-color;
+        &.error {
+          border-bottom-color: $theme-tertiary;
+        }
+      }
+      .input-title {
+        color: $gray-light;
+        position: absolute;
+        width: 100%;
+        top: 18px;
+        left: 0;
+        z-index: 1;
+        transition: all 0.5s ease;
+      }
+      label {
+        display: inline-block;
+        margin-bottom: 0.5rem;
+      }
+      &.input-focus,
+      &.input-focused {
+        .input-title {
+          top: -7px;
+          transform: scale(0.8);
+        }
+      }
+    }
+    .join {
+      border-radius: 3px;
+      margin-left: 0px;
+    }
+  }
+  @keyframes hideAlert {
+    0% {
+      opacity: 1;
+      height: 100%;
+      display: block;
+    }
+    90% {
+      opacity: 0;
+      height: 0px;
+      display: block;
+    }
+    100% {
+      opacity: 0;
+      display: none;
+    }
+  }
+}
+#g-recaptcha {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}

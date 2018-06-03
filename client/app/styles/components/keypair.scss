@@ -1,0 +1,189 @@
+#keypair {
+  .keypair {
+    background-color: #ebebeb;
+    padding: 14px 22px;
+    margin-bottom: 27px;
+    .memo {
+      line-height: 1.5;
+      font-size: 16px;
+      font-family: $font-ti;
+      text-align: left;
+      margin-bottom: 16px;
+    }
+    .info {
+      width: 100%;
+      .key-info {
+        width: 100%;
+        .name {
+          line-height: 1.67;
+          font-family: $font-ti;
+        }
+        .key {
+          text-transform: uppercase;
+          font-weight: bold;
+          width: 100%;
+          padding: 6px 12px;
+          // background-color: #ebebeb;
+          border: none;
+          &:focus {
+            outline: none;
+          }
+        }
+      }
+    }
+  }
+  .body-content {
+    margin-top: 37px;
+    .separate {
+      margin-top: 27px;
+      margin-bottom: 27px;
+      width: 100%;
+      height: 1px;
+      opacity: 0.3;
+      background-color: #d7d7d7;
+      border: solid 1px #d7d7d7;
+    }
+    .button-save {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 29px;
+      border: 1px solid #e1e1e1;
+      background-color: white;
+      color: $v2-blue-light;
+      font-family: $font-ti;
+      font-weight: bold;
+      padding: 8px 20px;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+    h4 {
+      font-family: $font-ti;
+      font-size: 20px;
+      font-weight: 600;
+      color: $v2-heading;
+    }
+    h5 {
+      font-family: $font-ti;
+      font-size: 18px;
+      font-weight: 600;
+      color: $v2-heading;
+    }
+    p {
+      margin-top: 15px;
+      font-family: $font-ti;
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 1.5;
+      text-align: left;
+      color: $v2-heading;
+    }
+
+    .form-group {
+      &.info {
+        display: inline-flex;
+        font-size: 14px;
+        margin-top: 0;
+        i {
+          color: white;
+          margin-right: 17px;
+          margin-top: 5px;
+          &::before {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 22px;
+            height: 22px;
+            border-radius: 22px;
+            background-color: $v2-blue-light;
+          }
+        }
+        strong {
+          font-weight: 600;
+        }
+        p {
+          margin-top: 0;
+        }
+      }
+    }
+    button {
+      width: 185px;
+      padding: 8px 22px;
+      .button-text {
+        font-size: 16px;
+        line-height: 1.5;
+        font-weight: bold;
+      }
+    }
+    .form-check {
+      margin-bottom: 24px;
+      font-family: $font-ti;
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 1.5;
+      padding-left: 0;
+      color: $v2-heading;
+      .form-check-label {
+        display: block;
+        position: relative;
+        padding-left: 35px;
+        margin-bottom: 12px;
+        cursor: pointer;
+        font-family: $font-ti;
+        font-size: 16px;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        a {
+          color: $v2-blue-light;
+          font-weight: 600;
+        }
+        .form-check-input {
+          position: absolute;
+          opacity: 0;
+          cursor: pointer;
+          &:checked {
+            background-color: $v2-blue-light;
+            & ~ .checkmark {
+              background-color: $v2-blue-light;
+              &:after {
+                display: block;
+              }
+            }
+          }
+          &.is-invalid {
+            & ~ .checkmark {
+              border: 1px solid $v2-orange;
+            }
+          }
+        }
+        .checkmark {
+          position: absolute;
+          top: 5px;
+          left: 0;
+          height: 18px;
+          width: 18px;
+          background-color: white;
+          border: 1px solid $v2-blue-light;
+          &::after {
+            content: "";
+            position: absolute;
+            display: none;
+            left: 5px;
+            top: 1px;
+            width: 7px;
+            height: 12px;
+            border: solid white;
+            border-width: 0 2px 2px 0;
+            -webkit-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+          }
+        }
+      }
+    }
+  }
+}

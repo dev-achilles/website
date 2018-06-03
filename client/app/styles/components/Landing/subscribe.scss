@@ -1,0 +1,44 @@
+#subscribe {
+  background: url($image-path+"bg-5-section@2x.png") no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  position: relative;
+  h3 {
+    text-transform: initial;
+    margin-bottom: 30px;
+  }
+  #subscribe-form {
+    .input-field {
+      position: relative;
+      .input-round {
+        color: #3c3c3c;
+        background: #fff;
+        border: 1px solid #fff;
+        border-radius: 27px;
+        line-height: 46px;
+        width: 100%;
+        padding-left: 30px;
+        outline: none;
+        transition: all 0.5s ease;
+        box-shadow: none;
+        text-align: center;
+      }
+    }
+    i {
+      display: none;
+      position: absolute;
+      right: 30px;
+      top: 20px;
+      font-size: 25px;
+      &.error {
+        display: block !important;
+        color: $theme-tertiary;
+      }
+    }
+    .join {
+      margin-top: 30px;
+    }
+  }
+}

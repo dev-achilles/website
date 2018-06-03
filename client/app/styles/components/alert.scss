@@ -1,0 +1,40 @@
+.app-alert {
+  align-items: center;
+  display: flex;
+  overflow: hidden;
+  pointer-events: all;
+  position: relative;
+
+  > * {
+    align-items: center;
+    align-self: stretch;
+    display: flex;
+  }
+
+  .alert-icon {
+    font-size: 30px;
+    padding: 10px;
+
+    i {
+      display: inline-block;
+      text-align: center;
+      width: 30px;
+    }
+  }
+
+  .alert-content {
+    align-items: flex-start;
+    flex: 1;
+    flex-direction: column;
+    font-family: $font-family-nunito;
+    font-size: 16px;
+    justify-content: center;
+    line-height: 1.4;
+    padding: 10px;
+    padding-right: 5px;
+
+    a {
+      text-decoration: underline;
+    }
+  }
+}

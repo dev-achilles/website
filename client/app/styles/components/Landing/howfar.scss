@@ -1,0 +1,82 @@
+#howfar {
+  background: url($image-path+"bg-2-section@2x.png") no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  position: relative;
+  h3 {
+    margin-top: 30px;
+  }
+  p {
+    margin-top: 15px;
+    font-family: $font-family-nunito;
+    font-size: 1.375rem;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: 0.4px;
+    color: $dark-color;
+  }
+  .navbar-toggler {
+    background-color: transparent;
+  }
+  .join {
+    padding: 20px 32px;
+    font-size: 22px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: 0.7px;
+    color: #ffffff;
+    margin-top: 38px;
+  }
+  .progress {
+    background-color: #ffffff;
+    height: 25px;
+    border-radius: 50px;
+    .done {
+      height: 25px;
+      border-radius: 50px;
+      background-image: linear-gradient(88deg, #4f4f4f, #3b3b3b 48%, #000000);
+    }
+    .percent {
+      height: 19px;
+      font-family: $font-family-nunito;
+      font-size: 14px;
+      font-weight: bold;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: normal;
+      letter-spacing: 0.2px;
+      text-align: left;
+      color: #ffffff;
+      margin-left: -45px;
+      margin-top: 3px;
+    }
+  }
+  .here {
+    margin-top: 50px;
+    p {
+      margin: 0;
+      text-align: right;
+    }
+  }
+  .fromto {
+    display: flex;
+    flex-direction: row;
+    p {
+      margin: 0;
+    }
+    .from {
+      flex: 1;
+      text-align: left;
+    }
+    .to {
+      flex: 1;
+      text-align: right;
+    }
+  }
+}

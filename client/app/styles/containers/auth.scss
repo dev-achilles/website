@@ -1,0 +1,13 @@
+#page-auth {
+  background: url($image-path+"bg.png") no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  position: relative;
+  min-height: 900px;
+  // height: 900px;
+  display: flex;
+  flex: 1;
+  justify-content: center;
+}

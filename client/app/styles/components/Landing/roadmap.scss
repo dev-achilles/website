@@ -1,0 +1,156 @@
+#roadmap {
+  background: url($image-path+"bg-6-section@2x.png") no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  position: relative;
+
+  .section-heading {
+    margin-bottom: 25px;
+  }
+  .align-items-end {
+    align-items: flex-end !important;
+  }
+  .roadmap-list {
+    margin-top: 30px;
+    margin-bottom: 0;
+    position: relative;
+    @include sm-only {
+      padding-left: 5px;
+      padding-right: 5px;
+    }
+    &:after {
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      height: 2px;
+      width: 100vw;
+      content: "";
+      transform: translateX(-50%);
+      background-color: $theme-primary;
+    }
+    .single-roadmap {
+      position: relative;
+      text-align: left;
+      padding: 0 0 30px 25px;
+
+      &.roadmap-sm {
+        min-height: auto;
+      }
+      &.roadmap-done {
+        &:after {
+          position: absolute;
+          font-family: "FontAwesome";
+          content: "\f00c";
+          left: 0;
+          top: -4px;
+          transform: translateX(-50%);
+          width: 19px;
+          height: 19px;
+          border-radius: 50%;
+          background: transparent;
+          font-size: 10px;
+          line-height: 19px;
+          text-align: center;
+          color: $theme-primary;
+          border: 1px solid $theme-primary-light;
+          background: $theme-primary;
+          color: #fff;
+          border: 1px solid $theme-primary-light;
+          @include sm-only {
+            left: 10px;
+          }
+        }
+      }
+      &.roadmap-down {
+        position: relative;
+        left: 0;
+        min-width: 100%;
+        max-width: 100%;
+        padding-top: 0;
+        transform: translateX(0);
+        &:before {
+          background-image: -webkit-linear-gradient(
+            top,
+            $theme-primary 0%,
+            $theme-primary-light 100%
+          );
+          background-image: linear-gradient(
+            top,
+            $theme-primary 0%,
+            $theme-primary-light 100%
+          );
+          position: absolute;
+          content: "";
+          left: 0;
+          width: 2px;
+          top: auto;
+          bottom: 0;
+          height: calc(100% - 15px);
+          @include sm-only {
+            left: 10px;
+          }
+        }
+        &:after {
+          left: 0;
+          top: 0;
+          transform: translateX(-50%);
+          @include sm-only {
+            left: 10px;
+          }
+        }
+      }
+      &:before {
+        background-image: -webkit-linear-gradient(
+          top,
+          $theme-primary-light 0%,
+          $theme-primary 100%
+        );
+        position: absolute;
+        content: "";
+        left: 0;
+        bottom: 0;
+        width: 2px;
+        height: calc(100% - 15px);
+        @include sm-only {
+          left: 10px;
+        }
+      }
+      &:after {
+        position: absolute;
+        content: "";
+        left: 0;
+        top: 0;
+        transform: translateX(-50%);
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        background: $theme-primary-light;
+        @include sm-only {
+          left: 10px;
+        }
+      }
+      h6 {
+        font-family: $font-family-nunito;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: 0.5px;
+        color: $dark-color;
+      }
+      p {
+        font-family: $font-family-nunito;
+        font-size: 16px;
+        font-weight: bold;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: 0.5px;
+        text-align: left;
+        color: $dark-color;
+      }
+    }
+  }
+}

@@ -6,13 +6,13 @@
 
     position: relative;
 
-    .collapse {
-      .nav-item {
-        @include sm-only {
-          background-color: white;
-        }
-      }
-    }
+    // .collapse {
+    //   .nav-item {
+    //     @include sm-only {
+    //       background-color: white;
+    //     }
+    //   }
+    // }
     .navbar-brand {
       font-family: $font-family-nunito;
       font-size: 1.875rem;
@@ -36,8 +36,13 @@
         padding-top: 10px;
         margin-left: 20px;
         @include sm-only {
+          width: 100%;
           padding-left: 20px;
           margin-left: 0;
+          background-color: #fffefe;
+          .nav-link {
+            width: 100%;
+          }
         }
       }
       a {

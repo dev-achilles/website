@@ -2,7 +2,7 @@
  * Project: react-boilerplate
  * Author: Duong Le (navi.ocean@outlook.com)
  * File Created: Tuesday, 29th May 2018 1:41:05 pm
- * Last Modified: Thursday, 31st May 2018 3:01:42 pm
+ * Last Modified: Monday, 4th June 2018 9:57:23 am
  */
 
 import React, { Component } from 'react';
@@ -55,14 +55,17 @@ class VerificationStep2 extends Component {
     }
   };
   renderNationality = () => {
-    const data = nationalities.map((nationality, index) => (
-      // eslint-disable-next-line
-      <option key={index} value={nationality}>
-        {nationality}
-      </option>
-    ));
-    data.unshift("<option key='none' value=''>Select nationality</option>");
-    return data;
+    const data = ['Select nationality', ...nationalities];
+    const options = data.map((nationality, index) => {
+      const value = nationality !== 'Select nationality' ? nationality : '';
+      return (
+        // eslint-disable-next-line
+        <option key={index.toString()} value={value}>
+          {nationality}
+        </option>
+      );
+    });
+    return options;
   };
 
   renderCountry = () => {

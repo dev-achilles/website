@@ -2,7 +2,7 @@
  * Project: react-boilerplate
  * Author: Duong Le (navi.ocean@outlook.com)
  * File Created: Sunday, 20th May 2018 12:20:09 pm
- * Last Modified: Friday, 1st June 2018 1:23:20 pm
+ * Last Modified: Sunday, 3rd June 2018 9:58:37 pm
  */
 import React, { PureComponent } from 'react';
 import { connect } from 'react-redux';

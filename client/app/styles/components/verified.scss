@@ -12,16 +12,21 @@
       opacity: 0.8;
       color: rgba(22, 34, 59, 0.8);
       align-items: center;
+      @include sm-only {
+        line-height: 1;
+      }
       i {
         color: white;
-        width: 22px;
-        height: 22px;
-        border-radius: 22px;
-        background-color: $v2-orange;
-        display: flex;
-        align-items: center;
-        justify-content: center;
         margin-right: 18px;
+        &::before {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 22px;
+          height: 22px;
+          border-radius: 22px;
+          background-color: $v2-orange;
+        }
       }
     }
     .body-heading {
@@ -195,6 +200,9 @@
             padding: 0;
             &.active {
               border: 1px solid $v2-blue-light;
+            }
+            @include sm-only {
+              margin-top: 10px;
             }
           }
           .form-check-input {

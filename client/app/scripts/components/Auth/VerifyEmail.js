@@ -36,7 +36,7 @@ class VerifyComponent extends Component {
       <div className="thankyou" id="thankyou">
         <h1>Email verification</h1>
         <div className="info">
-          We sent an email to <strong>{this.props.email}</strong> to make sure you own it. Please
+          We sent an email to <strong>{this.props.email}</strong>. Please
           check your inbox and enter the security code below to finish setting up your account.
         </div>
         <AvForm

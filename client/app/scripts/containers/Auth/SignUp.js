@@ -2,11 +2,11 @@
  * Project: react-boilerplate
  * Author: Duong Le (navi.ocean@outlook.com)
  * File Created: Tuesday, 22nd May 2018 11:29:01 pm
- * Last Modified: Friday, 1st June 2018 11:45:29 am
+ * Last Modified: Friday, 8th June 2018 7:57:48 am
  */
 import React, { PureComponent } from 'react';
 import { connect } from 'react-redux';
-import { SignUpComponent, ThankYouComponent, Navigation2 } from '../../components';
+import { SignUpComponent, ThankYouComponent, Navigation } from '../../components';
 
 export class SignUp extends PureComponent {
   constructor(props) {
@@ -16,7 +16,7 @@ export class SignUp extends PureComponent {
     const { signup } = this.props;
     return (
       <div className="page-auth" id="page-auth">
-        <Navigation2 isHome data={{}} />
+        <Navigation isHome data={{}} />
         {signup ? <ThankYouComponent /> : <SignUpComponent />}
       </div>
     );

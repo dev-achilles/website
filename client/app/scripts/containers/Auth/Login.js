@@ -2,7 +2,7 @@
  * Project: react-boilerplate
  * Author: Duong Le (navi.ocean@outlook.com)
  * File Created: Sunday, 20th May 2018 10:11:23 am
- * Last Modified: Sunday, 3rd June 2018 10:00:09 pm
+ * Last Modified: Friday, 8th June 2018 7:57:32 am
  */
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
@@ -11,7 +11,7 @@ import { push, replace } from 'react-router-redux';
 import {
   LoginComponent,
   ForgotComponent,
-  Navigation2,
+  Navigation,
   VerifyEmailComponent,
 } from '../../components';
 
@@ -45,7 +45,7 @@ export class Login extends Component {
   render() {
     return (
       <div className="page-auth" id="page-auth">
-        <Navigation2 isHome data={{}} />
+        <Navigation isHome data={{}} />
         {this.renderBody()}
       </div>
     );
@@ -61,4 +61,5 @@ const mapDispatchToProps = dispatch => ({
   dispatch,
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(Login);
+export default connect(mapStateToProps,
+  mapDispatchToProps)(Login);

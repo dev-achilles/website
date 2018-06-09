@@ -2,11 +2,12 @@
  * Project: react-boilerplate
  * Author: Duong Le (navi.ocean@outlook.com)
  * File Created: Sunday, 1st April 2018 6:07:42 am
- * Last Modified: Sunday, 20th May 2018 10:29:52 am
+ * Last Modified: Friday, 8th June 2018 7:46:22 am
  */
 import React, { Component } from 'react';
-import { Button } from 'reactstrap';
+import { Row, Col } from 'reactstrap';
 import _ from 'lodash';
+import Button from '../Button';
 
 export default class WhitePaper extends Component {
   render() {
@@ -14,20 +15,32 @@ export default class WhitePaper extends Component {
 
     if (d.show) {
       return (
-        <div className="whitepaper text-center" id="whitepaper">
+        <div className="section whitepaper text-center" id="whitepaper">
           <div className="container">
-            <div className="row justify-content-center align-items-center">
-              <div className="col-md-10 mx-auto">
+            <Row className="justify-content-center align-items-center">
+              <Col md={10} className="mx-auto">
                 <h2 className="section-heading">{d.heading}</h2>
-                <h3>{d.sub}</h3>
-                {d.button.show ? (
-                  <a href={d.button.link} className="join download btn btn-secondary">
-                    {d.button.text}
-                  </a>
-                ) : null}
-                <p>{d.text}</p>
-              </div>
-            </div>
+                <div className="whitepaper-body">
+                  <div className="whitepaper-info">
+                    <div className="underline" />
+                    <p>{d.sub}</p>
+                    {d.button.show ? (
+                      <Button
+                        className="button-light"
+                        upperCase
+                        iconRight="long-arrow-right"
+                        href={d.button.link}
+                      >
+                        {d.button.text}
+                      </Button>
+                    ) : null}
+                  </div>
+                  <div className="whitepaper-image">
+                    <img src={require('../../../assets/images/whitepaper-icon.png')} alt="" />
+                  </div>
+                </div>
+              </Col>
+            </Row>
           </div>
         </div>
       );

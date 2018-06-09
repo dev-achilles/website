@@ -64,7 +64,7 @@ export default class Business extends Component {
 
     if (b.show || t.show) {
       return (
-        <div className="business text-center" id="business">
+        <div className="section business text-center" id="business">
           <div className="container">
             {renderSectionBusiness()}
             {renderSectionToken()}

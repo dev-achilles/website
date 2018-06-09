@@ -2,7 +2,7 @@
  * Project: react-boilerplate
  * Author: Duong Le (navi.ocean@outlook.com)
  * File Created: Saturday, 31st March 2018 12:51:53 am
- * Last Modified: Thursday, 12th April 2018 3:29:04 pm
+ * Last Modified: Friday, 8th June 2018 6:42:09 am
  */
 import React, { Component } from 'react';
 import { Button } from 'reactstrap';
@@ -16,7 +16,7 @@ class PreSale extends Component {
 
     if (d.show) {
       return (
-        <div className="presale text-center" id="presale">
+        <div className="section presale text-center" id="presale">
           <div className="container">
             <div className="row justify-content-center align-items-center">
               <div className="col-md-8 mx-auto">

@@ -2,7 +2,7 @@
  * Project: react-boilerplate
  * Author: Duong Le (navi.ocean@outlook.com)
  * File Created: Sunday, 20th May 2018 10:47:16 am
- * Last Modified: Sunday, 27th May 2018 6:52:24 pm
+ * Last Modified: Friday, 8th June 2018 7:53:47 am
  */
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
@@ -16,6 +16,7 @@ export default class ButtonComponent extends Component {
     upperCase: PropTypes.bool,
     className: PropTypes.string,
     disabled: PropTypes.bool,
+    href: PropTypes.string,
   };
   static defaultProps = {
     onClick: () => {},
@@ -24,6 +25,7 @@ export default class ButtonComponent extends Component {
     className: 'btn-dark',
     upperCase: false,
     disabled: false,
+    href: '',
   };
 
   _renderIcon = name => <i className={`fa fa-${name}`} />;
@@ -47,7 +49,7 @@ export default class ButtonComponent extends Component {
     if (this.props.upperCase) className += ' upperCase';
     return <div className={className}>{this.props.children}</div>;
   };
-  render() {
+  renderButton() {
     let { className } = this.props;
     if (this.props.iconLeft || this.props.iconRight) className += ' button-icon';
     return (
@@ -61,5 +63,15 @@ export default class ButtonComponent extends Component {
         {this._renderRight()}
       </Button>
     );
+  }
+  render() {
+    if (this.props.href !== '') {
+      return (
+        <a href={this.props.href} alt="" target="_blank">
+          {this.renderButton()}
+        </a>
+      );
+    }
+    return this.renderButton();
   }
 }

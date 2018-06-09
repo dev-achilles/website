@@ -65,7 +65,7 @@ class VerificationStep1 extends Component {
                 <span className="checkmark" />
               </Label>
             </AvGroup>
-            <AvGroup check>
+            {/* <AvGroup check>
               <Label check>
                 I am not located in the United States of America or I am not a citizen, resident
                 (tax or otherwise) or green card holder of, or domiciled in, the United States of
@@ -91,7 +91,7 @@ class VerificationStep1 extends Component {
                 <AvInput type="checkbox" name="check5" required />
                 <span className="checkmark" />
               </Label>
-            </AvGroup>
+            </AvGroup> */}
             <Button
               className="button-light full-width"
               upperCase

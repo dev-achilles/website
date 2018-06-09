@@ -2,7 +2,7 @@
  * Project: react-boilerplate
  * Author: Duong Le (navi.ocean@outlook.com)
  * File Created: Wednesday, 23rd May 2018 12:50:35 am
- * Last Modified: Thursday, 31st May 2018 3:54:23 pm
+ * Last Modified: Friday, 8th June 2018 7:58:45 am
  */
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
@@ -27,7 +27,7 @@ import {
 } from 'reactstrap';
 import { Link } from 'react-router-dom';
 import {
-  Navigation2,
+  Navigation,
   SideBarComponent,
   Button,
   VerificationStep1,
@@ -172,7 +172,7 @@ class Verify extends Component {
       <div className="page-verified" id="page">
         <Row>
           <Col>
-            <Navigation2 isFixed data={{}} />
+            <Navigation isFixed data={{}} />
           </Col>
         </Row>
         <Row className="body">
@@ -199,4 +199,5 @@ const mapDispatchToProps = dispatch =>
     fetchSettings,
   },
   dispatch);
-export default connect(mapStateToProps, mapDispatchToProps)(Verify);
+export default connect(mapStateToProps,
+  mapDispatchToProps)(Verify);

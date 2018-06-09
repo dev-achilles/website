@@ -2,7 +2,7 @@
  * Project: react-boilerplate
  * Author: Duong Le (navi.ocean@outlook.com)
  * File Created: Sunday, 1st April 2018 5:26:43 am
- * Last Modified: Friday, 27th April 2018 12:05:45 am
+ * Last Modified: Friday, 8th June 2018 6:41:52 am
  */
 import React, { Component } from 'react';
 import uuidv1 from 'uuid/v1';
@@ -50,7 +50,7 @@ export default class HowItWork extends Component {
       });
     if (d.show) {
       return (
-        <div className="howitwork text-center" id="howitwork">
+        <div className="section howitwork text-center" id="howitwork">
           <div className="container">
             <div className="row justify-content-center align-items-center">
               <div className="col-md-12 mx-auto">

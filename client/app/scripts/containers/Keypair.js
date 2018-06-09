@@ -2,7 +2,7 @@
  * Project: react-boilerplate
  * Author: Duong Le (navi.ocean@outlook.com)
  * File Created: Saturday, 2nd June 2018 12:42:16 pm
- * Last Modified: Sunday, 3rd June 2018 3:47:37 pm
+ * Last Modified: Friday, 8th June 2018 7:58:35 am
  */
 import React, { Component } from 'react';
 import classnames from 'classnames';
@@ -14,7 +14,7 @@ import { AvForm, AvGroup, AvInput } from 'availity-reactstrap-validation';
 import { CSVLink, CSVDownload } from 'react-csv';
 import { go, push, replace } from 'react-router-redux';
 
-import { Navigation2, SideBarComponent, Button } from '../components';
+import { Navigation, SideBarComponent, Button } from '../components';
 import { fetchKeypair } from '../actions';
 
 class Keypair extends Component {
@@ -190,7 +190,7 @@ class Keypair extends Component {
       <div className="page-keypair" id="page">
         <Row>
           <Col>
-            <Navigation2 isFixed data={{}} />
+            <Navigation isFixed data={{}} />
           </Col>
         </Row>
         <Row className="body" id="keypair">
@@ -215,4 +215,5 @@ const mapDispatchToProps = dispatch => ({
   fetchKeypair: () => dispatch(fetchKeypair()),
   dispatch,
 });
-export default connect(mapStateToProps, mapDispatchToProps)(Keypair);
+export default connect(mapStateToProps,
+  mapDispatchToProps)(Keypair);

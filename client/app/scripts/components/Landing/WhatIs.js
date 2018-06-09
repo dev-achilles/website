@@ -2,7 +2,7 @@
  * Project: react-boilerplate
  * Author: Duong Le (navi.ocean@outlook.com)
  * File Created: Saturday, 31st March 2018 12:29:02 pm
- * Last Modified: Sunday, 3rd June 2018 3:07:31 pm
+ * Last Modified: Friday, 8th June 2018 6:42:35 am
  */
 import React, { Component } from 'react';
 import ReactHtmlParser from 'react-html-parser';
@@ -13,7 +13,7 @@ export default class WhatIs extends Component {
 
     if (d.show) {
       return (
-        <div className="whatis text-center" id="whatis">
+        <div className="section whatis text-center" id="whatis">
           <div className="container">
             <div className="row justify-content-center align-items-center">
               <div className="col-md-12 mx-auto">

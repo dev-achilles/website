@@ -2,11 +2,12 @@
  * Project: react-boilerplate
  * Author: Duong Le (navi.ocean@outlook.com)
  * File Created: Sunday, 1st April 2018 4:19:51 am
- * Last Modified: Thursday, 26th April 2018 11:56:15 pm
+ * Last Modified: Saturday, 9th June 2018 5:44:19 pm
  */
 import React, { Component } from 'react';
 import uuidv1 from 'uuid/v1';
 import ReactHtmlParser from 'react-html-parser';
+import { Row, Col } from 'reactstrap';
 
 export default class Meet extends Component {
   render() {
@@ -16,41 +17,41 @@ export default class Meet extends Component {
       d.list.map((content, index) => {
         if (index % 2) {
           return (
-            <div className="row reserve" key={uuidv1()}>
-              <div className="col-md-6 image">
+            <Row className="reserve" key={uuidv1()}>
+              <Col md={6} className="meet-image">
                 <img src={content.image} alt="" />
-              </div>
-              <div className="col-md-6 content">
-                <div className="title">{content.title}</div>
-                <div className="line" />
-                <div className="text">{ReactHtmlParser(content.content)}</div>
-              </div>
-            </div>
+              </Col>
+              <Col md={6} className="meet-content">
+                <div className="meet-content-title">{content.title}</div>
+                <div className="underline" />
+                <div className="meet-content-text">{ReactHtmlParser(content.content)}</div>
+              </Col>
+            </Row>
           );
         }
         return (
-          <div className="row" key={uuidv1()}>
-            <div className="col-md-6 content">
-              <div className="title">{content.title}</div>
-              <div className="line" />
-              <div className="text">{ReactHtmlParser(content.content)}</div>
-            </div>
-            <div className="col-md-6 image">
+          <Row key={uuidv1()}>
+            <Col md={6} className="meet-content">
+              <div className="meet-content-title">{content.title}</div>
+              <div className="underline" />
+              <div className="meet-content-text">{ReactHtmlParser(content.content)}</div>
+            </Col>
+            <Col md={6} className="meet-image">
               <img src={content.image} alt="" />
-            </div>
-          </div>
+            </Col>
+          </Row>
         );
       });
     if (d.show) {
       return (
-        <div className="meet text-center" id="meet">
+        <div className="section meet text-center" id="meet">
           <div className="container">
-            <div className="row justify-content-center align-items-center">
-              <div className="col-md-12 mx-auto">
+            <Row className="justify-content-center align-items-center">
+              <Col md={12} className="mx-auto">
                 <h2 className="section-heading">{d.heading}</h2>
                 <div className="contents">{renderContent()}</div>
-              </div>
-            </div>
+              </Col>
+            </Row>
           </div>
         </div>
       );

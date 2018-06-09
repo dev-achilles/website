@@ -2,10 +2,9 @@
  * Project: react-boilerplate
  * Author: Duong Le (navi.ocean@outlook.com)
  * File Created: Thursday, 29th March 2018 5:59:46 pm
- * Last Modified: Saturday, 2nd June 2018 11:27:34 am
+ * Last Modified: Friday, 8th June 2018 7:57:01 am
  */
 import Navigation from './Navigation';
-import Navigation2 from './Navigation2';
 import Intro from './Landing/Intro';
 import PreSale from './Landing/PreSale';
 import HowFar from './Landing/HowFar';
@@ -39,7 +38,6 @@ import SideBarComponent from './Sidebar';
 
 export {
   Navigation,
-  Navigation2,
   Intro,
   PreSale,
   HowFar,

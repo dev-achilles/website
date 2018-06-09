@@ -2,7 +2,7 @@
  * Project: react-boilerplate
  * Author: Duong Le (navi.ocean@outlook.com)
  * File Created: Saturday, 31st March 2018 10:45:25 am
- * Last Modified: Thursday, 12th April 2018 3:29:12 pm
+ * Last Modified: Friday, 8th June 2018 6:41:45 am
  */
 import React, { Component } from 'react';
 import { Button, Progress } from 'reactstrap';
@@ -13,7 +13,7 @@ export default class HowFar extends Component {
 
     if (d.show) {
       return (
-        <div className="howfar text-center" id="howfar">
+        <div className="section howfar text-center" id="howfar">
           <div className="container">
             <div className="row justify-content-center align-items-center">
               <div className="col-md-10 mx-auto">

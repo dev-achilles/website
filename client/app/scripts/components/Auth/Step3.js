@@ -2,7 +2,7 @@
  * Project: react-boilerplate
  * Author: Duong Le (navi.ocean@outlook.com)
  * File Created: Wednesday, 30th May 2018 11:39:25 am
- * Last Modified: Thursday, 31st May 2018 2:41:25 pm
+ * Last Modified: Tuesday, 5th June 2018 9:30:22 am
  */
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
@@ -115,18 +115,18 @@ class VerificationStep3 extends Component {
             <AvGroup>
               <AvInput
                 ref={(ref) => {
-                  this.seflie = ref;
+                  this.selfie = ref;
                 }}
                 type="text"
-                name="seflie"
-                id="seflie"
+                name="selfie"
+                id="selfie"
                 className="upload"
                 required
               />
               <UploadImage
                 callback={(url) => {
                   console.log(url);
-                  this.seflie.value = url;
+                  this.selfie.value = url;
                 }}
               />
               <AvFeedback>This field is invalid</AvFeedback>

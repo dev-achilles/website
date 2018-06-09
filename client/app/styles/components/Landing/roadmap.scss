@@ -1,10 +1,10 @@
 #roadmap {
-  background: url($image-path+"bg-6-section@2x.png") no-repeat center center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  position: relative;
+  // background: url($image-path+"bg-6-section@2x.png") no-repeat center center;
+  // -webkit-background-size: cover;
+  // -moz-background-size: cover;
+  // -o-background-size: cover;
+  // background-size: cover;
+  // position: relative;
 
   .section-heading {
     margin-bottom: 25px;
@@ -12,144 +12,239 @@
   .align-items-end {
     align-items: flex-end !important;
   }
-  .roadmap-list {
-    margin-top: 30px;
-    margin-bottom: 0;
+  .main-timeline {
+    overflow: hidden;
     position: relative;
-    @include sm-only {
-      padding-left: 5px;
-      padding-right: 5px;
-    }
-    &:after {
+    padding: 60px 0;
+    &:before {
       position: absolute;
       left: 50%;
-      bottom: 0;
-      height: 2px;
-      width: 100vw;
-      content: "";
-      transform: translateX(-50%);
-      background-color: $theme-primary;
+      top: 0;
+      content: " ";
+      display: block;
+      width: 2px;
+      height: 100%;
+      margin-left: -1px;
+      background: rgb(213, 213, 213);
+      background: -moz-linear-gradient(
+        top,
+        rgba(213, 213, 213, 0) 0%,
+        rgb(213, 213, 213) 8%,
+        rgb(213, 213, 213) 92%,
+        rgba(213, 213, 213, 0) 100%
+      );
+      background: -webkit-gradient(
+        linear,
+        left top,
+        left bottom,
+        color-stop(0%, rgba(30, 87, 153, 1)),
+        color-stop(100%, rgba(125, 185, 232, 1))
+      );
+      background: -webkit-linear-gradient(
+        top,
+        rgba(213, 213, 213, 0) 0%,
+        rgb(213, 213, 213) 8%,
+        rgb(213, 213, 213) 92%,
+        rgba(213, 213, 213, 0) 100%
+      );
+      background: -o-linear-gradient(
+        top,
+        rgba(213, 213, 213, 0) 0%,
+        rgb(213, 213, 213) 8%,
+        rgb(213, 213, 213) 92%,
+        rgba(213, 213, 213, 0) 100%
+      );
+      background: -ms-linear-gradient(
+        top,
+        rgba(213, 213, 213, 0) 0%,
+        rgb(213, 213, 213) 8%,
+        rgb(213, 213, 213) 92%,
+        rgba(213, 213, 213, 0) 100%
+      );
+      background: linear-gradient(
+        to bottom,
+        rgba(213, 213, 213, 0) 0%,
+        rgb(213, 213, 213) 8%,
+        rgb(213, 213, 213) 92%,
+        rgba(213, 213, 213, 0) 100%
+      );
     }
-    .single-roadmap {
+    .timeline {
+      @include md-only {
+        margin-bottom: 20px;
+      }
+      width: 50%;
+      clear: both;
       position: relative;
-      text-align: left;
-      padding: 0 0 30px 25px;
-
-      &.roadmap-sm {
-        min-height: auto;
+      &:before,
+      :after {
+        content: "";
+        display: block;
+        clear: both;
       }
-      &.roadmap-done {
-        &:after {
-          position: absolute;
-          font-family: "FontAwesome";
-          content: "\f00c";
-          left: 0;
-          top: -4px;
-          transform: translateX(-50%);
-          width: 19px;
-          height: 19px;
-          border-radius: 50%;
-          background: transparent;
-          font-size: 10px;
-          line-height: 19px;
-          text-align: center;
-          color: $theme-primary;
-          border: 1px solid $theme-primary-light;
-          background: $theme-primary;
-          color: #fff;
-          border: 1px solid $theme-primary-light;
-          @include sm-only {
-            left: 10px;
-          }
-        }
-      }
-      &.roadmap-down {
-        position: relative;
-        left: 0;
-        min-width: 100%;
-        max-width: 100%;
-        padding-top: 0;
-        transform: translateX(0);
+      &:nth-child(even) {
         &:before {
-          background-image: -webkit-linear-gradient(
-            top,
-            $theme-primary 0%,
-            $theme-primary-light 100%
-          );
-          background-image: linear-gradient(
-            top,
-            $theme-primary 0%,
-            $theme-primary-light 100%
-          );
-          position: absolute;
-          content: "";
-          left: 0;
-          width: 2px;
-          top: auto;
-          bottom: 0;
-          height: calc(100% - 15px);
-          @include sm-only {
-            left: 10px;
+          right: auto;
+          left: -8px;
+        }
+      }
+
+      &:nth-child(2n) {
+        float: right;
+        text-align: left;
+
+        .timeline-icon {
+          right: 0;
+          left: -8px;
+        }
+        .timeline-content {
+          float: right;
+          text-align: left;
+          .date {
+            text-align: left;
+            margin-top: -5px;
           }
+          &:after {
+            width: 140px;
+            left: 0%;
+          }
+        }
+      }
+      &.done {
+        .timeline-icon {
+          background-color: $brand-twitter;
+          &:before {
+            border-bottom: 4px solid $brand-twitter;
+          }
+          &:after {
+            border-top: 4px solid $brand-twitter;
+          }
+        }
+      }
+      .timeline-icon {
+        position: absolute;
+        top: 24px;
+        right: -8px;
+        z-index: 1;
+        width: 16px;
+        height: 10px;
+        position: absolute;
+        background: #f0f0f0;
+        margin-top: 0;
+        &:before {
+          content: "";
+          position: absolute;
+          left: 0;
+          width: 0;
+          height: 0;
+          border-bottom: 4px solid #f0f0f0;
+          border-left: 8px solid transparent;
+          border-right: 8px solid transparent;
+          top: -4px;
         }
         &:after {
+          content: "";
+          position: absolute;
           left: 0;
-          top: 0;
-          transform: translateX(-50%);
-          @include sm-only {
-            left: 10px;
+          width: 0;
+          height: 0;
+          border-left: 8px solid transparent;
+          border-right: 8px solid transparent;
+          border-top: 4px solid #f0f0f0;
+          bottom: -4px;
+        }
+      }
+      .timeline-content {
+        width: 100%;
+        padding: 0 30px;
+        // background: #fff;
+        text-align: left;
+        float: left;
+        border: 1px solid transparent;
+        position: relative;
+        transition: all 0.3s ease 0s;
+        &:after {
+          content: "";
+          width: 95%;
+          height: 1px;
+          background: #cfcdcd;
+          position: absolute;
+          top: 28px;
+          right: 0;
+        }
+
+        .date {
+          text-align: left;
+          display: block;
+          font-size: 25px;
+          font-weight: 600;
+          color: #fefefe;
+          margin: 0 0 8px;
+          transition: all 0.3s ease 0s;
+        }
+        .title {
+          font-size: 18px;
+          color: #444;
+          margin-top: 0;
+          transition: all 0.3s ease 0s;
+        }
+        .description {
+          font-size: 16px;
+          color: rgba(255, 255, 255, 0.8);
+          line-height: 28px;
+          margin-top: 8px;
+        }
+      }
+    }
+  }
+  @include md-only {
+    .main-timeline {
+      padding-left: 20px;
+      &:before {
+        left: 20px;
+      }
+
+      .timeline {
+        width: 100%;
+        float: right;
+        text-align: left;
+        &:first-child {
+          &:before {
+            right: auto;
+            left: -11px;
           }
         }
-      }
-      &:before {
-        background-image: -webkit-linear-gradient(
-          top,
-          $theme-primary-light 0%,
-          $theme-primary 100%
-        );
-        position: absolute;
-        content: "";
-        left: 0;
-        bottom: 0;
-        width: 2px;
-        height: calc(100% - 15px);
-        @include sm-only {
-          left: 10px;
+        &:nth-child(old) {
+          &:before {
+            right: auto;
+            left: -11px;
+          }
         }
-      }
-      &:after {
-        position: absolute;
-        content: "";
-        left: 0;
-        top: 0;
-        transform: translateX(-50%);
-        width: 15px;
-        height: 15px;
-        border-radius: 50%;
-        background: $theme-primary-light;
-        @include sm-only {
-          left: 10px;
+        &:nth-child(2n) {
+          .timeline-content {
+            &:after {
+              width: 140px;
+            }
+          }
         }
-      }
-      h6 {
-        font-family: $font-family-nunito;
-        font-weight: normal;
-        font-style: normal;
-        font-stretch: normal;
-        line-height: normal;
-        letter-spacing: 0.5px;
-        color: $dark-color;
-      }
-      p {
-        font-family: $font-family-nunito;
-        font-size: 16px;
-        font-weight: bold;
-        font-style: normal;
-        font-stretch: normal;
-        line-height: normal;
-        letter-spacing: 0.5px;
-        text-align: left;
-        color: $dark-color;
+        .timeline-content {
+          float: right;
+          text-align: left;
+          .date {
+            text-align: left;
+          }
+          &:before {
+            left: -7.3px;
+          }
+          &:after {
+            left: 0;
+            width: 140px;
+          }
+        }
+        .timeline-icon {
+          right: 0;
+          left: -9px;
+        }
       }
     }
   }

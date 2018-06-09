@@ -2,7 +2,7 @@
  * Project: react-boilerplate
  * Author: Duong Le (navi.ocean@outlook.com)
  * File Created: Sunday, 1st April 2018 6:16:24 am
- * Last Modified: Thursday, 26th April 2018 11:55:47 pm
+ * Last Modified: Friday, 8th June 2018 12:40:42 pm
  */
 import React, { Component } from 'react';
 import { join } from 'redux-saga/effects';
@@ -17,19 +17,21 @@ export default class RoadMap extends Component {
 
     const renderRoadmap = () =>
       d.list.map((roadmap, index) => {
-        let classmap = ['single-roadmap', 'roadmap-sm'];
-        if (index % 2) classmap = ['single-roadmap', 'roadmap-sm', 'roadmap-down'];
-        if (roadmap.done) classmap.push('roadmap-done');
+        const classmap = ['timeline'];
+        if (roadmap.done) classmap.push('done');
         return (
           <div className={classmap.join(' ')} key={uuidv1()}>
-            <h6>{moment(roadmap.time).format('MMM YYYY')}</h6>
-            <p>{ReactHtmlParser(roadmap.content)}</p>
+            <div className="timeline-icon" />
+            <div className="timeline-content">
+              <span className="date">{moment(roadmap.time).format('MMM YYYY')}</span>
+              <p className="description">{ReactHtmlParser(roadmap.content)}</p>
+            </div>
           </div>
         );
       });
     if (d.show) {
       return (
-        <div className="roadmap text-center" id="roadmap">
+        <div className="section roadmap text-center" id="roadmap">
           <div className="container">
             <div className="row justify-content-center align-items-center">
               <div className="col-md-8 mx-auto">
@@ -37,7 +39,9 @@ export default class RoadMap extends Component {
                 <p>{d.sub}</p>
               </div>
             </div>
-            <div className="row roadmap-list">{renderRoadmap()}</div>
+            <div className="row">
+              <div className="main-timeline">{renderRoadmap()}</div>
+            </div>
           </div>
         </div>
       );

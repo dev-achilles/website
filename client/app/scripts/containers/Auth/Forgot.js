@@ -2,11 +2,11 @@
  * Project: react-boilerplate
  * Author: Duong Le (navi.ocean@outlook.com)
  * File Created: Sunday, 20th May 2018 10:11:30 am
- * Last Modified: Saturday, 2nd June 2018 11:23:29 am
+ * Last Modified: Friday, 8th June 2018 7:57:24 am
  */
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { ForgotComponent, Navigation2 } from '../../components';
+import { ForgotComponent, Navigation } from '../../components';
 
 export class Forgot extends Component {
   constructor(props) {
@@ -24,7 +24,7 @@ export class Forgot extends Component {
     const { forgot } = this.props;
     return (
       <div className="page-auth" id="page-auth">
-        <Navigation2 isHome data={{}} />
+        <Navigation isHome data={{}} />
         {!forgot ? <ForgotComponent /> : this.renderThankyou()}
       </div>
     );

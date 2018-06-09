@@ -2,7 +2,7 @@
  * Project: react-boilerplate
  * Author: Duong Le (navi.ocean@outlook.com)
  * File Created: Thursday, 31st May 2018 4:15:43 pm
- * Last Modified: Sunday, 3rd June 2018 5:52:29 pm
+ * Last Modified: Friday, 8th June 2018 7:58:53 am
  */
 import React, { Component } from 'react';
 import classnames from 'classnames';
@@ -11,7 +11,7 @@ import { connect } from 'react-redux';
 import { Row, Col, Label, Table } from 'reactstrap';
 import { Link } from 'react-router-dom';
 import { go, push, replace } from 'react-router-redux';
-import { Navigation2, SideBarComponent, Button } from '../components';
+import { Navigation, SideBarComponent, Button } from '../components';
 import { fetchWallet } from '../actions';
 
 class Wallet extends Component {
@@ -88,7 +88,7 @@ class Wallet extends Component {
       <div className="page-wallet" id="page">
         <Row>
           <Col>
-            <Navigation2 isFixed data={{}} />
+            <Navigation isFixed data={{}} />
           </Col>
         </Row>
         <Row className="body">
@@ -115,4 +115,5 @@ const mapDispatchToProps = dispatch => ({
   dispatch,
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(Wallet);
+export default connect(mapStateToProps,
+  mapDispatchToProps)(Wallet);

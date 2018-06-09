@@ -2,7 +2,7 @@
  * Project: react-boilerplate
  * Author: Duong Le (navi.ocean@outlook.com)
  * File Created: Tuesday, 29th May 2018 1:27:27 am
- * Last Modified: Sunday, 3rd June 2018 3:47:28 pm
+ * Last Modified: Friday, 8th June 2018 7:58:23 am
  */
 import React, { Component } from 'react';
 import classnames from 'classnames';
@@ -21,7 +21,7 @@ import {
   FormText,
 } from 'reactstrap';
 import { Link } from 'react-router-dom';
-import { Navigation2, SideBarComponent, Button } from '../components';
+import { Navigation, SideBarComponent, Button } from '../components';
 
 export default class Dashboard extends Component {
   render() {

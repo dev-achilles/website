@@ -2,7 +2,7 @@
  * Project: react-boilerplate
  * Author: Duong Le (navi.ocean@outlook.com)
  * File Created: Saturday, 14th April 2018 8:05:17 pm
- * Last Modified: Friday, 20th April 2018 4:24:23 pm
+ * Last Modified: Friday, 8th June 2018 6:42:28 am
  */
 /*
  * Project: react-boilerplate
@@ -86,7 +86,7 @@ export default class Subscribe extends Component {
 
     if (d.show) {
       return (
-        <div className="subscribe text-center" id="subscribe">
+        <div className="section subscribe text-center" id="subscribe">
           <div className="container">
             <div className="row justify-content-center align-items-center">
               <div className="col-md-10 mx-auto">

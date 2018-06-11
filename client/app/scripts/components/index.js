@@ -2,7 +2,7 @@
  * Project: react-boilerplate
  * Author: Duong Le (navi.ocean@outlook.com)
  * File Created: Thursday, 29th March 2018 5:59:46 pm
- * Last Modified: Friday, 8th June 2018 7:57:01 am
+ * Last Modified: Sunday, 10th June 2018 10:20:29 pm
  */
 import Navigation from './Navigation';
 import Intro from './Landing/Intro';
@@ -14,6 +14,7 @@ import HowItWork from './Landing/HowItWork';
 import WhitePaper from './Landing/WhitePaper';
 import RoadMap from './Landing/RoadMap';
 import Team from './Landing/Team';
+import Advisor from './Landing/Advisor';
 import Business from './Landing/Business';
 import Subscribe from './Landing/Subscribe';
 import Footer from './Footer';
@@ -35,6 +36,7 @@ import VerificationStep3 from './Auth/Step3';
 import VerificationStep4 from './Auth/Step4';
 
 import SideBarComponent from './Sidebar';
+import NavSections from './Landing/NavSection';
 
 export {
   Navigation,
@@ -47,6 +49,7 @@ export {
   WhitePaper,
   RoadMap,
   Team,
+  Advisor,
   Business,
   Footer,
   Loading,
@@ -56,6 +59,7 @@ export {
   SystemAlerts,
   Error,
   Button,
+  NavSections,
   LoginComponent,
   VerifyEmailComponent,
   SignUpComponent,

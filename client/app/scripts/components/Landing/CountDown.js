@@ -2,7 +2,7 @@
  * Project: react-boilerplate
  * Author: Duong Le (navi.ocean@outlook.com)
  * File Created: Saturday, 31st March 2018 8:44:25 am
- * Last Modified: Saturday, 31st March 2018 9:06:42 am
+ * Last Modified: Sunday, 10th June 2018 8:51:14 am
  */
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
@@ -89,7 +89,7 @@ class Countdown extends Component {
       <div className="countdown row">
         <span className="countdown-col">
           <span className="countdown-col-element">
-            <strong>{this.addLeadingZeros(countDown.days)}</strong>
+            <div className="countdown-digit">{this.addLeadingZeros(countDown.days)}</div>
             <span className="unit">{countDown.days === 1 ? 'Day' : 'Days'}</span>
           </span>
           <strong className="colon">:</strong>
@@ -97,7 +97,7 @@ class Countdown extends Component {
 
         <span className="countdown-col">
           <span className="countdown-col-element">
-            <strong>{this.addLeadingZeros(countDown.hours)}</strong>
+            <div className="countdown-digit">{this.addLeadingZeros(countDown.hours)}</div>
             <span className="unit">Hours</span>
           </span>
           <strong className="colon">:</strong>
@@ -105,7 +105,7 @@ class Countdown extends Component {
 
         <span className="countdown-col">
           <span className="countdown-col-element">
-            <strong>{this.addLeadingZeros(countDown.min)}</strong>
+            <div className="countdown-digit">{this.addLeadingZeros(countDown.min)}</div>
             <span className="unit">Min</span>
           </span>
           <strong className="colon">:</strong>
@@ -113,7 +113,7 @@ class Countdown extends Component {
 
         <span className="countdown-col">
           <span className="countdown-col-element">
-            <strong>{this.addLeadingZeros(countDown.sec)}</strong>
+            <div className="countdown-digit">{this.addLeadingZeros(countDown.sec)}</div>
             <span className="unit">Sec</span>
           </span>
         </span>

@@ -282,3 +282,11 @@ p {
   margin-top: 12px;
   margin-bottom: 12px;
 }
+.particles-container {
+  position: fixed;
+  z-index: 0;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}

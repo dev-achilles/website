@@ -2,7 +2,7 @@
  * Project: react-boilerplate
  * Author: Duong Le (navi.ocean@outlook.com)
  * File Created: Sunday, 1st April 2018 9:46:16 pm
- * Last Modified: Saturday, 21st April 2018 12:01:11 pm
+ * Last Modified: Sunday, 10th June 2018 8:48:59 pm
  */
 import React, { Component } from 'react';
 import { Button } from 'reactstrap';
@@ -38,7 +38,7 @@ class Contact extends Component {
     const d = this.props.contact.data;
     return (
       <div className="page-contact" id="page-contact">
-        <Navigation isPage data={d.header} />
+        <Navigation isHome data={d.header} />
         <ContactComponent data={d.contact} display />
         <Footer data={d.footer} />
       </div>
@@ -53,4 +53,5 @@ const mapDispatchToProps = dispatch =>
     fetchContact,
   },
   dispatch);
-export default connect(mapStateToProps, mapDispatchToProps)(Contact);
+export default connect(mapStateToProps,
+  mapDispatchToProps)(Contact);

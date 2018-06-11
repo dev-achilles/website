@@ -1,19 +1,22 @@
 #meet {
   .contents {
-    display: flex;
+    // display: flex;
     // flex: 1;
-    flex-direction: column;
-    align-items: center;
+    // flex-direction: column;
+    // align-items: center;
+    // max-width: 1000px;
     .row {
       display: flex;
       justify-content: space-between;
       margin-top: 54px;
-      max-width: 1000px;
       .meet-content {
         flex: 1;
-        padding: 30px 20px;
+        display: flex;
+        flex-direction: column;
+        padding: 30px 40px;
         background-color: $v2-nav-bg;
         min-height: 352px;
+        justify-content: center;
         .meet-content-title {
           font-size: 22px;
           font-weight: bold;
@@ -32,18 +35,35 @@
       }
       .meet-image {
         flex: 1;
-        min-height: 352px;
+        // max-height: 352px;
+        background-color: #5e90e3;
+        object-fit: fill;
         img {
+          height: 100%;
           width: 100%;
         }
       }
     }
-    @include sm-only {
-      .reserve {
+
+    .swiper-pagination-bullet {
+      background-color: white;
+    }
+    @include md-only {
+      .row {
         flex-direction: column-reverse;
+        align-items: center;
       }
-      .content {
-        margin-bottom: 20px;
+
+      .reserve {
+        flex-direction: column;
+      }
+    }
+    @include sm-only {
+      .row {
+        padding: 10px;
+        .meet-content {
+          padding: 10px;
+        }
       }
     }
   }

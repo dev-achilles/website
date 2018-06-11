@@ -1,10 +1,10 @@
 #footer {
   padding: 30px 0;
-  background-color: $theme-primary;
   .container {
     padding: 0;
   }
   .copyright {
+    color: #fffeee;
     display: flex;
     justify-content: space-between;
     @include sm-only {
@@ -21,7 +21,7 @@
           display: inline-block;
           padding-right: 20px;
           a {
-            color: $dark-color;
+            color: #fffeee;
             text-decoration: none;
             &:hover {
               opacity: 0.5;
@@ -42,8 +42,8 @@
       height: 40px;
       width: 40px;
       min-width: 40px;
-      background-color: $dark-color;
-      border-color: $dark-color;
+      background-color: $v2-nav-bg;
+      border-color: $v2-nav-bg;
       box-sizing: border-box;
       border-width: 2px;
       font-size: 16px;
@@ -63,7 +63,7 @@
         -webkit-box-shadow: none;
         box-shadow: none;
         i {
-          color: $dark-color;
+          color: $v2-nav-bg;
         }
       }
       i {

@@ -2,6 +2,9 @@
   .whitepaper-body {
     margin-top: 139px;
     display: flex;
+    @include sm-only {
+      flex-direction: column-reverse;
+    }
     .whitepaper-info {
       flex: 1;
       display: flex;
@@ -31,8 +34,8 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      width: 503px;
-      height: 352px;
+      // width: 503px;
+      // height: 352px;
       background-color: rgba(0, 0, 0, 0.2);
       img {
         height: 304px;

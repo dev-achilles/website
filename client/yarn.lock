@@ -2178,6 +2178,12 @@ dom-walk@^0.1.0:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/dom-walk/-/dom-walk-0.1.1.tgz#672226dc74c8f799ad35307df936aba11acd6018"
 
+dom7@^2.0.6:
+  version "2.0.6"
+  resolved "https://registry.yarnpkg.com/dom7/-/dom7-2.0.6.tgz#ea9f187de68635783cd5985fde52842763632903"
+  dependencies:
+    ssr-window "^1.0.0"
+
 domain-browser@^1.1.1:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/domain-browser/-/domain-browser-1.2.0.tgz#3d31f50191a6749dd1375a7f522e823d42e54eda"
@@ -4634,6 +4640,10 @@ lodash.templatesettings@^4.0.0:
   dependencies:
     lodash._reinterpolate "~3.0.0"
 
+lodash.throttle@^4.1.1:
+  version "4.1.1"
+  resolved "https://registry.yarnpkg.com/lodash.throttle/-/lodash.throttle-4.1.1.tgz#c23e91b710242ac70c37f1e1cda9274cc39bf2f4"
+
 lodash.tonumber@^4.0.3:
   version "4.0.3"
   resolved "https://registry.yarnpkg.com/lodash.tonumber/-/lodash.tonumber-4.0.3.tgz#0b96b31b35672793eb7f5a63ee791f1b9e9025d9"
@@ -5877,7 +5887,7 @@ promise@^7.1.1:
   dependencies:
     asap "~2.0.3"
 
-prop-types@^15.5.10, prop-types@^15.5.3, prop-types@^15.5.4, prop-types@^15.5.7, prop-types@^15.5.8, prop-types@^15.6.0, prop-types@^15.6.1:
+prop-types@15.6.1, prop-types@^15.5.10, prop-types@^15.5.3, prop-types@^15.5.4, prop-types@^15.5.7, prop-types@^15.5.8, prop-types@^15.6.0, prop-types@^15.6.1:
   version "15.6.1"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.6.1.tgz#36644453564255ddda391191fb3a125cbdf654ca"
   dependencies:
@@ -6079,6 +6089,14 @@ react-html-parser@^2.0.2:
   dependencies:
     htmlparser2 "^3.9.0"
 
+react-id-swiper@^1.6.4:
+  version "1.6.4"
+  resolved "https://registry.yarnpkg.com/react-id-swiper/-/react-id-swiper-1.6.4.tgz#38fccf4ca482416f7e8b6a3ea8026403d28d4e4b"
+  dependencies:
+    object-assign "^4.1.1"
+    prop-types "15.6.1"
+    swiper "^4.2.6"
+
 react-lifecycles-compat@^3.0.4:
   version "3.0.4"
   resolved "https://registry.yarnpkg.com/react-lifecycles-compat/-/react-lifecycles-compat-3.0.4.tgz#4f1a273afdfc8f3488a8c516bfda78f872352362"
@@ -6141,6 +6159,13 @@ react-router@^4.2.0:
     path-to-regexp "^1.7.0"
     prop-types "^15.5.4"
     warning "^3.0.0"
+
+react-scroll@^1.7.9:
+  version "1.7.9"
+  resolved "https://registry.yarnpkg.com/react-scroll/-/react-scroll-1.7.9.tgz#83e6bfc1e10a7b7ff7dbc34008b76737501aba6b"
+  dependencies:
+    lodash.throttle "^4.1.1"
+    prop-types "^15.5.8"
 
 react-side-effect@^1.1.0:
   version "1.1.5"
@@ -6983,6 +7008,10 @@ sshpk@^1.7.0:
     jsbn "~0.1.0"
     tweetnacl "~0.14.0"
 
+ssr-window@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/ssr-window/-/ssr-window-1.0.0.tgz#8ed1b6beaa0a371ba7e74d6515d584c3f1cf973c"
+
 static-extend@^0.1.1:
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/static-extend/-/static-extend-0.1.2.tgz#60809c39cbff55337226fd5e0b520f341f1fb5c6"
@@ -7166,6 +7195,13 @@ sw-toolbox@^3.4.0:
   dependencies:
     path-to-regexp "^1.0.1"
     serviceworker-cache-polyfill "^4.0.0"
+
+swiper@^4.2.6:
+  version "4.3.3"
+  resolved "https://registry.yarnpkg.com/swiper/-/swiper-4.3.3.tgz#92e39c806ead23a18e5c3251dfba1ae9ce76270e"
+  dependencies:
+    dom7 "^2.0.6"
+    ssr-window "^1.0.0"
 
 symbol-observable@^1.0.3:
   version "1.2.0"

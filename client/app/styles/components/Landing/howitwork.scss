@@ -1,54 +1,23 @@
 #howitwork {
-  // background-color: white;
   .contents {
+    // display: flex;
+    // flex: 1;
+    // flex-direction: column;
+    // align-items: center;
+    // max-width: 1000px;
     .row {
-      &.reserve {
-        .content {
-          .position {
-            align-items: flex-end;
-            img {
-              margin-right: 60px;
-            }
-            .number {
-              top: 0;
-              right: 0;
-              left: auto;
-            }
-          }
-        }
-      }
-      align-items: center;
+      display: flex;
+      justify-content: space-between;
       margin-top: 54px;
-      .content {
-        .position {
-          height: 170px;
-          width: 100%;
-          position: relative;
-          display: flex;
-          flex-direction: column;
-          align-items: flex-start;
-          img {
-            height: 170px;
-            width: 150px;
-            margin-left: 60px;
-          }
-          .number {
-            font-family: $font-family-nunito;
-            font-size: 100px;
-            font-weight: 900;
-            font-style: normal;
-            font-stretch: normal;
-            line-height: normal;
-            letter-spacing: 4.8px;
-            text-align: left;
-            color: $theme-primary;
-            position: absolute;
-            text-decoration: underline;
-            top: 0;
-            left: 0;
-          }
-        }
-        .title {
+      .how-content {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        padding: 30px 40px;
+        background-color: $v2-nav-bg;
+        min-height: 352px;
+        justify-content: center;
+        .how-content-title {
           font-size: 22px;
           font-weight: bold;
           font-style: normal;
@@ -57,23 +26,41 @@
           letter-spacing: 1px;
           text-align: left;
           text-transform: uppercase;
-          margin-top: 14px;
-          margin-bottom: 17px;
+          color: #fefefe;
         }
-        .text {
+        .how-content-text {
           text-align: justify;
+          color: #fefefe;
         }
       }
-      img {
-        width: 300px;
+      .how-image {
+        background-color: #5e90e3;
+        flex: 1;
+        padding: 10px;
+        // max-height: 352px;
+        object-fit: fill;
+        img {
+          height: auto;
+          max-width: 100%;
+        }
+      }
+    }
+
+    .swiper-pagination-bullet {
+      background-color: white;
+    }
+    @include md-only {
+      .row {
+        flex-direction: column;
+        align-items: center;
       }
     }
     @include sm-only {
-      .reserve {
-        flex-direction: column-reverse;
-      }
-      .content {
-        margin-bottom: 20px;
+      .row {
+        padding: 10px;
+        .how-content {
+          padding: 10px;
+        }
       }
     }
   }

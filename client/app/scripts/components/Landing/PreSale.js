@@ -2,12 +2,11 @@
  * Project: react-boilerplate
  * Author: Duong Le (navi.ocean@outlook.com)
  * File Created: Saturday, 31st March 2018 12:51:53 am
- * Last Modified: Friday, 8th June 2018 6:42:09 am
+ * Last Modified: Sunday, 10th June 2018 9:13:14 am
  */
 import React, { Component } from 'react';
-import { Button } from 'reactstrap';
 import moment from 'moment';
-
+import Button from '../Button';
 import CountDown from './CountDown';
 
 class PreSale extends Component {
@@ -19,13 +18,15 @@ class PreSale extends Component {
         <div className="section presale text-center" id="presale">
           <div className="container">
             <div className="row justify-content-center align-items-center">
-              <div className="col-md-8 mx-auto">
+              <div className="col-md-6 mx-auto">
                 <h2 className="section-heading">{d.heading}</h2>
                 <h3>{d.sub}</h3>
                 <CountDown date={moment(d.endTime).format('MM/DD/YYYY')} />
                 {d.button.show ? (
-                  <a className="join btn btn-secondary" href={d.button.link}>
-                    {d.button.text}
+                  <a href={d.button.link}>
+                    <Button className="button-light" upperCase iconRight="long-arrow-right">
+                      {d.button.text}
+                    </Button>
                   </a>
                 ) : null}
               </div>

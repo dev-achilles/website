@@ -2,7 +2,7 @@
  * Project: react-boilerplate
  * Author: Duong Le (navi.ocean@outlook.com)
  * File Created: Wednesday, 23rd May 2018 12:50:35 am
- * Last Modified: Friday, 8th June 2018 7:58:45 am
+ * Last Modified: Monday, 11th June 2018 7:35:46 am
  */
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
@@ -146,7 +146,10 @@ class Verify extends Component {
     <div className="info">
       <p>We will not be accepting US, Chinese & Korean citizens due to legal restrictions.</p>
       <p>
-        Please check out: <Link to="https://www.leekICO.com">https://www.leekICO.com</Link>
+        Please check out:{' '}
+        <a href="https://www.leekICO.com" alt="">
+          https://www.leekICO.com
+        </a>
       </p>
     </div>
   );

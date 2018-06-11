@@ -1,35 +1,51 @@
 #introduction {
-  //   min-height: 700px;
-  // padding-top: 117px;
-  // background: url($image-path+"header-bg@2x.png") no-repeat center center;
-  // -webkit-background-size: cover;
-  // -moz-background-size: cover;
-  // -o-background-size: cover;
-  // background-size: cover;
-  // position: relative;
-  .intro {
-    font-size: 16px;
-    font-weight: bold;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: 1.88;
-    letter-spacing: 0.3px;
-    text-align: center;
-    color: $dark-color;
+  // padding-top: 60px;
+  .sub-heading {
+    text-transform: uppercase;
+    font-size: 14px;
+    color: #fefefe;
+    margin-bottom: 5px;
   }
-  .video {
-    margin-top: 47px;
-    margin-bottom: 36px;
-    padding-top: 56.25%;
-    position: relative;
-    span {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
+  .contents {
+    .row {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 54px;
+      @include sm-only {
+        flex-direction: column;
+      }
+      .intro-image {
+        flex: 1;
+        object-fit: fill;
+        img {
+          height: 100%;
+          width: 100%;
+        }
+        margin-right: 20px;
+        @include sm-only {
+          margin-right: 0;
+        }
+      }
+      .intro-content {
+        margin-left: 20px;
+        @include sm-only {
+          margin-left: 0;
+        }
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        padding: 30px 40px;
+        background-color: rgba(0, 0, 0, 0.2);
+        min-height: 352px;
+        justify-content: center;
+        .intro-content-text {
+          text-align: justify;
+          color: #fefefe;
+        }
+      }
     }
   }
+
   .particles-container {
     position: absolute;
     top: 0;

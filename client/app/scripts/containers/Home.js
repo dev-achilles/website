@@ -2,7 +2,7 @@
  * Project: react-boilerplate
  * Author: Duong Le (navi.ocean@outlook.com)
  * File Created: Thursday, 29th March 2018 5:40:31 pm
- * Last Modified: Friday, 8th June 2018 1:17:36 pm
+ * Last Modified: Sunday, 10th June 2018 10:21:06 pm
  */
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
@@ -10,6 +10,7 @@ import { bindActionCreators } from 'redux';
 import _ from 'lodash';
 import Particles from 'react-particles-js';
 import uuidv1 from 'uuid/v1';
+import { Link, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll';
 import {
   Navigation,
   Intro,
@@ -21,24 +22,46 @@ import {
   WhitePaper,
   RoadMap,
   Team,
+  Advisor,
   Business,
   Footer,
   Preloader,
   Contact,
   Subscribe,
   Error,
+  NavSections,
 } from '../components';
 import { fetchHome, sendSubscribe, showAlert } from '../actions';
 
 class Home extends Component {
   constructor(props) {
     super(props);
+    this.nav_sections = new Set();
   }
   componentWillMount = () => {
     this.props.fetchHome();
   };
 
-  componentDidMount = () => {};
+  componentDidMount = () => {
+    Events.scrollEvent.register('begin', (to, element) => {
+      console.log(
+        'begin', to, element,
+      );
+    });
+
+    Events.scrollEvent.register('end', (to, element) => {
+      console.log(
+        'end', to, element,
+      );
+    });
+
+    scrollSpy.update();
+  };
+
+  componentWillUnmount = () => {
+    Events.scrollEvent.remove('begin');
+    Events.scrollEvent.remove('end');
+  };
 
   submitSubscribe = (data) => {
     this.props.sendSubscribe(data);
@@ -53,64 +76,113 @@ class Home extends Component {
     }
 
     const x = this.props.home.data;
+
     const sorted = () =>
       x.sorted.map((section) => {
         switch (section.section) {
           case 'header':
             return <Navigation isHome data={x.header} key={uuidv1()} />;
-          // case 'intro':
-          //   return <Intro data={x.intro} key={uuidv1()} />;
-          // case 'presale':
-          //   return <PreSale data={x.presale} key={uuidv1()} />;
+          case 'intro':
+            this.nav_sections.add(section);
+            return (
+              <Element name={section.section} key={uuidv1()}>
+                <Intro data={x.intro} />
+              </Element>
+            );
+          case 'presale':
+            this.nav_sections.add(section);
+            return (
+              <Element name={section.section} key={uuidv1()}>
+                <PreSale data={x.presale} />
+              </Element>
+            );
           // case 'howfar':
           //   return <HowFar data={x.howfar} key={uuidv1()} />;
           // case 'whatis':
           //   return <WhatIs data={x.whatis} key={uuidv1()} />;
           case 'meet':
-            return <Meet data={x.meet} key={uuidv1()} />;
-          // case 'howit':
-          //   return <HowItWork data={x.howit} key={uuidv1()} />;
-          // case 'whitepaper':
-          // return <WhitePaper data={x.whitepaper} key={uuidv1()} />;
+            this.nav_sections.add(section);
+            return (
+              <Element name={section.section} key={uuidv1()}>
+                <Meet data={x.meet} />
+              </Element>
+            );
+          case 'howit':
+            this.nav_sections.add(section);
+            return (
+              <Element name={section.section} key={uuidv1()}>
+                <HowItWork data={x.howit} />
+              </Element>
+            );
+          case 'whitepaper':
+            this.nav_sections.add(section);
+            return (
+              <Element name={section.section} key={uuidv1()}>
+                <WhitePaper data={x.whitepaper} />
+              </Element>
+            );
           case 'roadmap':
-            return <RoadMap data={x.roadmap} key={uuidv1()} />;
+            this.nav_sections.add(section);
+            return (
+              <Element name={section.section} key={uuidv1()}>
+                <RoadMap data={x.roadmap} />
+              </Element>
+            );
           case 'team':
-            return <Team dataTeam={x.team} dataAdvisors={x.advisors} key={uuidv1()} />;
+            this.nav_sections.add(section);
+            return (
+              <Element name={section.section} key={uuidv1()}>
+                <Team dataTeam={x.team} />
+              </Element>
+            );
+          case 'advisor':
+            this.nav_sections.add(section);
+            return (
+              <Element name={section.section} key={uuidv1()}>
+                <Advisor dataAdvisors={x.advisors} />
+              </Element>
+            );
           // case 'business':
           //   return <Business dataTokens={x.tokens} dataBusiness={x.business} key={uuidv1()} />;
-          // case 'footer':
-          //   return <Footer data={x.footer} key={uuidv1()} />;
+          case 'footer':
+            return (
+              <Element name={section.section} key={uuidv1()}>
+                <Footer data={x.footer} />
+              </Element>
+            );
           // case 'contact':
-          //   return <Contact data={x.contact} key={uuidv1()} />;
-          case 'subscribe':
-            return <Subscribe data={x.subscribe} onSubmit={this.submitSubscribe} key={uuidv1()} />;
+          // return <Contact data={x.contact} key={uuidv1()} />;
+          // case 'subscribe':
+          // return <Subscribe data={x.subscribe} onSubmit={this.submitSubscribe} key={uuidv1()} />;
           default:
-            return <div key={uuidv1()} />;
+            return null;
         }
       });
+
+    console.log(this.nav_sections);
     return (
       <div className="home sections">
-        {/* <Particles
+        <Particles
           key={uuidv1()}
           className="particles-container"
           params={{
             particles: {
               number: {
-                value: 30,
+                value: 20,
                 density: {
                   enable: !0,
-                  value_area: 800,
+                  value_area: 1000,
                 },
               },
               color: {
-                value: '#fff100',
+                value: '#1da1f2',
               },
               shape: {
                 type: 'circle',
                 opacity: 0.2,
                 stroke: {
                   width: 0,
-                  color: '#ffc400',
+                  color: '#3d60a6',
                 },
                 polygon: {
                   nb_sides: 5,
@@ -144,7 +216,7 @@ class Home extends Component {
               line_linked: {
                 enable: !0,
                 distance: 150,
-                color: '#ffc400',
+                color: '#3d60a6',
                 opacity: 0.3,
                 width: 1.3,
               },
@@ -204,7 +276,8 @@ class Home extends Component {
             },
             retina_detect: !0,
           }}
-        /> */}
+        />
+        <NavSections data={Array.from(this.nav_sections)} />
         {sorted()}
       </div>
     );

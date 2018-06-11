@@ -2,7 +2,7 @@
  * Project: react-boilerplate
  * Author: Duong Le (navi.ocean@outlook.com)
  * File Created: Sunday, 1st April 2018 6:07:42 am
- * Last Modified: Friday, 8th June 2018 7:46:22 am
+ * Last Modified: Sunday, 10th June 2018 9:00:35 am
  */
 import React, { Component } from 'react';
 import { Row, Col } from 'reactstrap';
@@ -18,7 +18,7 @@ export default class WhitePaper extends Component {
         <div className="section whitepaper text-center" id="whitepaper">
           <div className="container">
             <Row className="justify-content-center align-items-center">
-              <Col md={10} className="mx-auto">
+              <Col md={12} className="mx-auto">
                 <h2 className="section-heading">{d.heading}</h2>
                 <div className="whitepaper-body">
                   <div className="whitepaper-info">

@@ -2,17 +2,18 @@
  * Project: react-boilerplate
  * Author: Duong Le (navi.ocean@outlook.com)
  * File Created: Thursday, 12th April 2018 3:16:38 pm
- * Last Modified: Saturday, 21st April 2018 12:00:56 pm
+ * Last Modified: Sunday, 10th June 2018 8:51:07 pm
  */
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { Label, Input, Button } from 'reactstrap';
+import { Label, Input } from 'reactstrap';
 import uuidv1 from 'uuid/v1';
 import PropTypes from 'prop-types';
 import Recaptcha from 'react-recaptcha';
 import { recaptcha } from '../configs';
 import { sendContact } from '../actions';
+import Button from './Button';
 
 class Contact extends Component {
   static propTypes = {
@@ -193,7 +194,12 @@ class Contact extends Component {
                     </Recaptcha>
                   </div>
                   <div className="input-field">
-                    <Button type="submit" className="join" onClick={this.submitForm}>
+                    <Button
+                      className="button-light full-width"
+                      upperCase
+                      iconRight="long-arrow-right"
+                      onClick={this.submitForm}
+                    >
                       {d.button.text}
                     </Button>
                   </div>
@@ -212,4 +218,5 @@ const mapDispatchToProps = dispatch =>
     sendContact,
   },
   dispatch);
-export default connect(null, mapDispatchToProps)(Contact);
+export default connect(null,
+  mapDispatchToProps)(Contact);

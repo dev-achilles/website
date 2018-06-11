@@ -2,7 +2,7 @@
  * Project: react-boilerplate
  * Author: Duong Le (navi.ocean@outlook.com)
  * File Created: Tuesday, 10th April 2018 4:08:33 pm
- * Last Modified: Saturday, 21st April 2018 7:46:43 am
+ * Last Modified: Sunday, 10th June 2018 9:05:41 am
  */
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
@@ -48,7 +48,7 @@ class Footer extends Component {
         </li>
       ));
     return (
-      <div className="footer" id="footer">
+      <div className="section footer" id="footer">
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-xs-12">
@@ -73,4 +73,5 @@ const mapDispatchToProps = dispatch => ({
   changeRoute: url => dispatch(push(url)),
   dispatch,
 });
-export default connect(null, mapDispatchToProps)(Footer);
+export default connect(null,
+  mapDispatchToProps)(Footer);

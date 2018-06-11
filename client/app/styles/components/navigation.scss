@@ -1,4 +1,8 @@
 #nav {
+  @include lg-only {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
   &.navbar {
     // transition: 0.8s;
     // -webkit-transition: 0.8s;

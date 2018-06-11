@@ -2,7 +2,7 @@
  * Project: react-boilerplate
  * Author: Duong Le (navi.ocean@outlook.com)
  * File Created: Sunday, 20th May 2018 12:24:27 pm
- * Last Modified: Sunday, 3rd June 2018 5:53:21 pm
+ * Last Modified: Monday, 11th June 2018 8:15:51 am
  */
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
@@ -123,41 +123,7 @@ class Navigation2 extends Component {
   );
 
   render() {
-    const header = {
-      button: {
-        text: 'JOIN PRIVATE SALE NOW',
-        show: false,
-        link: '#',
-      },
-      show: true,
-      title: 'HAWKING',
-      nav: [
-        {
-          title: 'Team',
-          url: '#team',
-        },
-        {
-          title: 'Roadmap',
-          url: '#roadmap',
-        },
-        {
-          title: 'Facebook',
-          url: 'https://www.facebook.com/HawkingNetwork-141971256527135/',
-        },
-        {
-          title: 'OnePager',
-          url: '#whitepaper',
-        },
-        {
-          title: 'Telegram',
-          url: 'https://t.me/hawkingnetwork',
-        },
-      ],
-    };
-
-    const d = Object.assign(
-      { show: false }, this.props.data, header,
-    );
+    const d = Object.assign({ show: false }, this.props.data);
     if (!d.show) return null;
 
     const renderMenu = () =>
@@ -169,13 +135,7 @@ class Navigation2 extends Component {
 
     const { isAuthenticated } = this.props;
     return (
-      <Navbar
-        color="faded"
-        light
-        expand="md"
-        id="nav"
-        className={this.state.navbarClass.join(' ')}
-      >
+      <Navbar color="faded" light expand="md" id="nav" className={this.state.navbarClass.join(' ')}>
         <NavbarBrand href="/#" onClick={this.onClick}>
           <img src={require('../../assets/images/logo.png')} alt={d.title} className="logoImage" />
         </NavbarBrand>
@@ -198,4 +158,5 @@ const mapDispatchToProps = dispatch => ({
   logout: () => dispatch(submitLogout()),
   dispatch,
 });
-export default connect(mapStateToProps, mapDispatchToProps)(Navigation2);
+export default connect(mapStateToProps,
+  mapDispatchToProps)(Navigation2);

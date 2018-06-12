@@ -2,7 +2,7 @@
  * Project: react-boilerplate
  * Author: Duong Le (navi.ocean@outlook.com)
  * File Created: Saturday, 2nd June 2018 12:42:16 pm
- * Last Modified: Friday, 8th June 2018 7:58:35 am
+ * Last Modified: Tuesday, 12th June 2018 10:01:50 pm
  */
 import React, { Component } from 'react';
 import classnames from 'classnames';
@@ -61,8 +61,8 @@ class Keypair extends Component {
   _renderHeader = () => (
     <div className="body-header">
       <div className="body-title">
-        <i className="fa fa-info" />
-        Process for a new account
+        {/* <i className="fa fa-info" />
+        Process for a new account */}
       </div>
       <h2 className="body-heading">Create Account Keypair</h2>
       <p>

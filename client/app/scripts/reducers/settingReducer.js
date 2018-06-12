@@ -2,7 +2,7 @@
  * Project: react-boilerplate
  * Author: Duong Le (navi.ocean@outlook.com)
  * File Created: Tuesday, 10th April 2018 2:06:40 pm
- * Last Modified: Wednesday, 30th May 2018 12:55:18 pm
+ * Last Modified: Monday, 11th June 2018 2:42:30 pm
  */
 import { RESET, SET_SETTINGS } from '../actions/actionTypes';
 

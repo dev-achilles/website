@@ -2,7 +2,7 @@
  * Project: react-boilerplate
  * Author: Duong Le (navi.ocean@outlook.com)
  * File Created: Sunday, 1st April 2018 5:26:43 am
- * Last Modified: Sunday, 10th June 2018 8:04:58 am
+ * Last Modified: Tuesday, 12th June 2018 1:15:44 pm
  */
 import React, { Component } from 'react';
 import uuidv1 from 'uuid/v1';
@@ -23,6 +23,10 @@ export default class HowItWork extends Component {
       pagination: {
         el: '.swiper-pagination',
         clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
       },
     };
     const renderContent = () =>

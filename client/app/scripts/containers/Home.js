@@ -2,7 +2,7 @@
  * Project: react-boilerplate
  * Author: Duong Le (navi.ocean@outlook.com)
  * File Created: Thursday, 29th March 2018 5:40:31 pm
- * Last Modified: Sunday, 10th June 2018 10:21:06 pm
+ * Last Modified: Tuesday, 12th June 2018 1:28:11 pm
  */
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
@@ -36,7 +36,6 @@ import { fetchHome, sendSubscribe, showAlert } from '../actions';
 class Home extends Component {
   constructor(props) {
     super(props);
-    this.nav_sections = new Set();
   }
   componentWillMount = () => {
     this.props.fetchHome();
@@ -83,14 +82,12 @@ class Home extends Component {
           case 'header':
             return <Navigation isHome data={x.header} key={uuidv1()} />;
           case 'intro':
-            this.nav_sections.add(section);
             return (
               <Element name={section.section} key={uuidv1()}>
                 <Intro data={x.intro} />
               </Element>
             );
           case 'presale':
-            this.nav_sections.add(section);
             return (
               <Element name={section.section} key={uuidv1()}>
                 <PreSale data={x.presale} />
@@ -101,42 +98,36 @@ class Home extends Component {
           // case 'whatis':
           //   return <WhatIs data={x.whatis} key={uuidv1()} />;
           case 'meet':
-            this.nav_sections.add(section);
             return (
               <Element name={section.section} key={uuidv1()}>
                 <Meet data={x.meet} />
               </Element>
             );
           case 'howit':
-            this.nav_sections.add(section);
             return (
               <Element name={section.section} key={uuidv1()}>
                 <HowItWork data={x.howit} />
               </Element>
             );
           case 'whitepaper':
-            this.nav_sections.add(section);
             return (
               <Element name={section.section} key={uuidv1()}>
                 <WhitePaper data={x.whitepaper} />
               </Element>
             );
           case 'roadmap':
-            this.nav_sections.add(section);
             return (
               <Element name={section.section} key={uuidv1()}>
                 <RoadMap data={x.roadmap} />
               </Element>
             );
           case 'team':
-            this.nav_sections.add(section);
             return (
               <Element name={section.section} key={uuidv1()}>
                 <Team dataTeam={x.team} />
               </Element>
             );
           case 'advisor':
-            this.nav_sections.add(section);
             return (
               <Element name={section.section} key={uuidv1()}>
                 <Advisor dataAdvisors={x.advisors} />
@@ -277,7 +268,7 @@ class Home extends Component {
             retina_detect: !0,
           }}
         />
-        <NavSections data={Array.from(this.nav_sections)} />
+        <NavSections />
         {sorted()}
       </div>
     );

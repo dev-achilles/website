@@ -2,7 +2,7 @@
  * Project: react-boilerplate
  * Author: Duong Le (navi.ocean@outlook.com)
  * File Created: Sunday, 1st April 2018 8:19:42 pm
- * Last Modified: Friday, 20th April 2018 8:16:56 pm
+ * Last Modified: Tuesday, 12th June 2018 1:16:31 pm
  */
 import {
   FETCH_HOME_SUCCESS,
@@ -37,8 +37,6 @@ export default (state = initialState, action) => {
         ...state,
         fetching: true,
       };
-    case RESET:
-      return initialState;
     default:
       return state;
   }

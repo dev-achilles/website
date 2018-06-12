@@ -2,7 +2,7 @@
  * Project: react-boilerplate
  * Author: Duong Le (navi.ocean@outlook.com)
  * File Created: Sunday, 20th May 2018 12:24:27 pm
- * Last Modified: Monday, 11th June 2018 8:15:51 am
+ * Last Modified: Monday, 11th June 2018 1:22:05 pm
  */
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
@@ -19,11 +19,12 @@ import {
   DropdownMenu,
   DropdownItem,
 } from 'reactstrap';
+import _ from 'lodash';
 import { go, push, replace } from 'react-router-redux';
 import PropTypes from 'prop-types';
 import uuidv1 from 'uuid/v1';
 import Button from './Button';
-import { submitLogout } from '../actions';
+import { submitLogout, fetchHome } from '../actions';
 
 class Navigation2 extends Component {
   static propTypes = {
@@ -42,6 +43,9 @@ class Navigation2 extends Component {
   }
 
   componentDidMount = () => {
+    if (_.isEmpty(this.props.home.data) && !this.props.home.fetching) {
+      this.props.fetchHome();
+    }
     if (!this.props.isFixed) {
       if (window.pageYOffset >= 100) {
         const navbarClass = this.props.isHome ? ['home', 'fixed-top'] : ['page', 'fixed-top'];
@@ -123,7 +127,10 @@ class Navigation2 extends Component {
   );
 
   render() {
-    const d = Object.assign({ show: false }, this.props.data);
+    if (this.props.home.fetching) {
+      return null;
+    }
+    const d = Object.assign({ show: false }, this.props.home.data.header);
     if (!d.show) return null;
 
     const renderMenu = () =>
@@ -151,11 +158,13 @@ class Navigation2 extends Component {
   }
 }
 const mapStateToProps = state => ({
+  home: state.home,
   ...state.auth,
 });
 const mapDispatchToProps = dispatch => ({
   goUrl: url => dispatch(push(url)),
   logout: () => dispatch(submitLogout()),
+  fetchHome: () => dispatch(fetchHome()),
   dispatch,
 });
 export default connect(mapStateToProps,

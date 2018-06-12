@@ -2,7 +2,7 @@
  * Project: react-boilerplate
  * Author: Duong Le (navi.ocean@outlook.com)
  * File Created: Friday, 8th June 2018 8:29:47 am
- * Last Modified: Friday, 8th June 2018 9:40:35 am
+ * Last Modified: Tuesday, 12th June 2018 1:38:09 pm
  */
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
@@ -26,9 +26,10 @@ class AdvisorMember extends Component {
   };
   render() {
     const { member } = this.props;
+    /* eslint-disable */
     return (
       <div className="col-sm-12 col-md-8 col-lg-6 inline-flex justify-content-center">
-        <div className="advisor">
+        <div className="advisor" onClick={this.showDesc}>
           <div className="avatar">
             <img src={member.avatar} alt="team" />
           </div>
@@ -61,7 +62,6 @@ class AdvisorMember extends Component {
               </ul>
             </div>
             <p className="position">{member.position}</p>
-            <p className="description">{member.description}</p>
           </div>
           {this.state.show ? (
             <div className="description">

@@ -4,7 +4,7 @@
   bottom: 0;
   left: 0;
   right: 0;
-  background: rgba($color: $dark-color, $alpha: 0.5);
+  background: rgba($color: $v2-nav-bg, $alpha: 0.5);
   display: none;
   &.show {
     display: block;
@@ -39,7 +39,7 @@
         bottom: 5px;
         border-radius: 50%;
         border: 3px solid transparent;
-        border-top-color: $dark-color;
+        border-top-color: $v2-nav-bg;
         -webkit-animation: spin 3s linear infinite;
         animation: spin 3s linear infinite;
       }
@@ -52,7 +52,7 @@
         bottom: 15px;
         border-radius: 50%;
         border: 3px solid transparent;
-        border-top-color: $theme-primary;
+        border-top-color: $v2-orange;
         -webkit-animation: spin 1.5s linear infinite;
         animation: spin 1.5s linear infinite;
       }

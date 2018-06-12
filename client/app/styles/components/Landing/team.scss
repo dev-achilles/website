@@ -134,7 +134,10 @@
     flex-direction: column;
     .advisor {
       height: 177px;
-
+      @include sm-only {
+        padding: 0 5px;
+        height: 140px;
+      }
       margin-bottom: 60px;
       position: relative;
       display: flex;
@@ -147,6 +150,47 @@
           width: 155px;
           height: 177px;
         }
+        @include sm-only {
+          width: 120px;
+          height: 140px;
+          img {
+            width: 120px;
+            height: 140px;
+          }
+        }
+      }
+      .description {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        padding: 4px;
+        background-color: rgba(61, 96, 166, 0.8);
+        .description-content {
+          display: flex;
+          height: 100%;
+          flex: 1;
+          align-items: center;
+          justify-content: center;
+          background-color: rgba(0, 0, 0, 0.3);
+          color: #fefefe;
+          text-align: left;
+          padding: 5px;
+        }
+      }
+      .close-member {
+        position: absolute;
+        z-index: 99;
+        top: 10px;
+        right: 10px;
+        &:hover {
+          text-decoration: none;
+        }
+        i {
+          font-size: 20px;
+          color: #fefefe;
+        }
       }
       .info {
         width: 300px;
@@ -154,6 +198,7 @@
         padding: 24px 27px;
         background-color: $v2-nav-bg;
         text-align: left;
+
         .wrap-name {
           display: flex;
           flex-direction: row;
@@ -166,13 +211,13 @@
           color: #fefefe;
           margin-bottom: 0;
         }
-        .description {
-          margin-top: 10px;
-          font-size: 16px;
-          line-height: 1.5;
-          color: #fefefe;
-          text-align: left;
-        }
+        // .description {
+        //   margin-top: 10px;
+        //   font-size: 16px;
+        //   line-height: 1.5;
+        //   color: #fefefe;
+        //   text-align: left;
+        // }
 
         .position {
           margin-top: 8px;
@@ -181,6 +226,17 @@
           line-height: 1.57;
           text-align: left;
           margin-bottom: 0;
+        }
+
+        @include sm-only {
+          padding: 5px 5px;
+          width: 190px;
+          .position {
+            font-size: 13px;
+          }
+          .description {
+            font-size: 15px;
+          }
         }
 
         .social {

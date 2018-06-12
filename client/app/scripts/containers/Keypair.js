@@ -133,6 +133,7 @@ class Keypair extends Component {
                   className="key"
                   value={this.props.keypair.public_key}
                   onFocus={this._handleFocus}
+                  readOnly
                 />
               </div>
             </div>
@@ -144,6 +145,7 @@ class Keypair extends Component {
                   className="key"
                   value={this.props.keypair.private_key}
                   onFocus={this._handleFocus}
+                  readOnly
                 />
               </div>
             </div>

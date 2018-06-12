@@ -41,7 +41,7 @@
       bottom: 5px;
       border-radius: 50%;
       border: 3px solid transparent;
-      border-top-color: $theme-primary-light;
+      border-top-color: $v2-blue-light;
       -webkit-animation: spin 3s linear infinite;
       animation: spin 3s linear infinite;
     }
@@ -54,13 +54,13 @@
       bottom: 15px;
       border-radius: 50%;
       border: 3px solid transparent;
-      border-top-color: $theme-primary;
+      border-top-color: $v2-orange;
       -webkit-animation: spin 1.5s linear infinite;
       animation: spin 1.5s linear infinite;
     }
   }
   .loader-section {
-    background: $dark-color;
+    background: $v2-nav-bg;
     position: fixed;
     height: 51%;
     width: 100%;

@@ -2,7 +2,7 @@
  * Project: react-boilerplate
  * Author: Duong Le (navi.ocean@outlook.com)
  * File Created: Wednesday, 23rd May 2018 12:50:35 am
- * Last Modified: Monday, 11th June 2018 7:35:46 am
+ * Last Modified: Monday, 11th June 2018 1:18:27 pm
  */
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
@@ -175,7 +175,7 @@ class Verify extends Component {
       <div className="page-verified" id="page">
         <Row>
           <Col>
-            <Navigation isFixed data={{}} />
+            <Navigation isFixed />
           </Col>
         </Row>
         <Row className="body">

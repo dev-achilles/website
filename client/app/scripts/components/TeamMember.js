@@ -2,7 +2,7 @@
  * Project: react-boilerplate
  * Author: Duong Le (navi.ocean@outlook.com)
  * File Created: Friday, 8th June 2018 8:29:47 am
- * Last Modified: Friday, 8th June 2018 9:12:22 am
+ * Last Modified: Tuesday, 12th June 2018 1:31:23 pm
  */
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
@@ -63,7 +63,8 @@ class TeamMember extends Component {
             </ul>
           </div>
           {this.state.show ? (
-            <div className="description">
+            // eslint-disable-next-line
+            <div className="description" onClick={this.showDesc}>
               <div className="description-content">{member.description}</div>
               <div className="close-member">
                 <a href="/#" onClick={this.showDesc}>

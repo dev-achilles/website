@@ -2,7 +2,7 @@
  * Project: react-boilerplate
  * Author: Duong Le (navi.ocean@outlook.com)
  * File Created: Sunday, 20th May 2018 10:11:23 am
- * Last Modified: Friday, 8th June 2018 7:57:32 am
+ * Last Modified: Monday, 11th June 2018 1:18:03 pm
  */
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
@@ -45,7 +45,7 @@ export class Login extends Component {
   render() {
     return (
       <div className="page-auth" id="page-auth">
-        <Navigation isHome data={{}} />
+        <Navigation isHome />
         {this.renderBody()}
       </div>
     );

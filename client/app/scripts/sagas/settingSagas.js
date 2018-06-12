@@ -2,19 +2,22 @@
  * Project: react-boilerplate
  * Author: Duong Le (navi.ocean@outlook.com)
  * File Created: Wednesday, 30th May 2018 6:57:02 am
- * Last Modified: Wednesday, 30th May 2018 11:48:48 am
+ * Last Modified: Monday, 11th June 2018 2:51:15 pm
  */
 import { put, takeLatest } from 'redux-saga/effects';
+import { filterData } from '../helpers';
 import { FETCH_SETTINGS } from '../actions/actionTypes';
 
 import { getSettingsApi } from '../services';
-import { showLoading, hideLoading, showAlert, setSettings } from '../actions';
+import { showLoading, hideLoading, showAlert, setSettings, updateUser } from '../actions';
 
 function* fetchSettings(action) {
   try {
     yield put(showLoading());
     const result = yield getSettingsApi(action.payload);
-    yield put(setSettings(result.data));
+    const data = filterData(result);
+    yield put(setSettings(data));
+    if (typeof result.data.user !== 'undefined') yield put(updateUser(result.data.user));
     yield put(hideLoading());
     // yield put(showAlert(result.message, { type: 'success' }));
   } catch (error) {

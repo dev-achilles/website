@@ -2,7 +2,7 @@
  * Project: react-boilerplate
  * Author: Duong Le (navi.ocean@outlook.com)
  * File Created: Friday, 20th April 2018 8:01:30 pm
- * Last Modified: Tuesday, 29th May 2018 7:10:24 pm
+ * Last Modified: Monday, 11th June 2018 2:51:11 pm
  */
 import { store } from '../store';
 import { RESET } from '../actions/actionTypes';
@@ -97,3 +97,12 @@ export const postData = (url, postdata) =>
         return reject(data);
       });
   });
+
+export const filterData = (data) => {
+  const result = Object.assign({}, data.data);
+  if (typeof result !== 'undefined' && typeof result.user !== 'undefined') {
+    delete result.user;
+  }
+  console.log(result);
+  return result;
+};

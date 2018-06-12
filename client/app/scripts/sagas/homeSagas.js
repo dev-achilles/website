@@ -2,9 +2,10 @@
  * Project: react-boilerplate
  * Author: Duong Le (navi.ocean@outlook.com)
  * File Created: Sunday, 1st April 2018 8:26:06 pm
- * Last Modified: Wednesday, 30th May 2018 7:03:30 am
+ * Last Modified: Monday, 11th June 2018 2:57:15 pm
  */
 import { put, takeLatest } from 'redux-saga/effects';
+import { filterData } from '../helpers';
 import {
   FETCH_HOME,
   FETCH_HOME_INPROCESS,
@@ -18,15 +19,17 @@ import {
 } from '../actions/actionTypes';
 
 import { getHomeFromApi } from '../services';
-import { showPreLoader, hidePreLoader } from '../actions';
+import { showPreLoader, hidePreLoader, updateUser } from '../actions';
 
 function* fetchHome() {
   try {
     // fetch movies from api
     yield put(showPreLoader());
     yield put({ type: FETCH_HOME_INPROCESS });
-    const data = yield getHomeFromApi();
-    yield put({ type: FETCH_HOME_SUCCESS, payload: data.data });
+    const result = yield getHomeFromApi();
+    const data = filterData(result);
+    yield put({ type: FETCH_HOME_SUCCESS, payload: data });
+    if (typeof result.data.user !== 'undefined') yield put(updateUser(result.data.user));
 
     if (data.data && data.data.settings) {
       yield put({ type: SET_TITLE, payload: data.data.settings.title });

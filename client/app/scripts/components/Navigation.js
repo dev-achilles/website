@@ -2,7 +2,7 @@
  * Project: react-boilerplate
  * Author: Duong Le (navi.ocean@outlook.com)
  * File Created: Sunday, 20th May 2018 12:24:27 pm
- * Last Modified: Monday, 11th June 2018 1:22:05 pm
+ * Last Modified: Tuesday, 12th June 2018 4:02:37 pm
  */
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
@@ -26,7 +26,7 @@ import uuidv1 from 'uuid/v1';
 import Button from './Button';
 import { submitLogout, fetchHome } from '../actions';
 
-class Navigation2 extends Component {
+class Navigation extends Component {
   static propTypes = {
     isFixed: PropTypes.bool,
   };
@@ -168,4 +168,4 @@ const mapDispatchToProps = dispatch => ({
   dispatch,
 });
 export default connect(mapStateToProps,
-  mapDispatchToProps)(Navigation2);
+  mapDispatchToProps)(Navigation);

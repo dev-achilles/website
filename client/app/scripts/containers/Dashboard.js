@@ -2,7 +2,7 @@
  * Project: react-boilerplate
  * Author: Duong Le (navi.ocean@outlook.com)
  * File Created: Tuesday, 29th May 2018 1:27:27 am
- * Last Modified: Friday, 8th June 2018 7:58:23 am
+ * Last Modified: Tuesday, 12th June 2018 4:02:48 pm
  */
 import React, { Component } from 'react';
 import classnames from 'classnames';
@@ -29,7 +29,7 @@ export default class Dashboard extends Component {
       <div className="page-dashboard" id="page">
         <Row>
           <Col>
-            <Navigation2 isFixed data={{}} />
+            <Navigation isFixed />
           </Col>
         </Row>
         <Row className="body">

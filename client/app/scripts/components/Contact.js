@@ -189,9 +189,7 @@ class Contact extends Component {
                       verifyCallback={this.verifyCallback}
                       onloadCallback={this.callback}
                       expiredCallback={this.expiredCallback}
-                    >
-                      <Button onClick={this.resetRecaptcha} />
-                    </Recaptcha>
+                    />
                   </div>
                   <div className="input-field">
                     <Button

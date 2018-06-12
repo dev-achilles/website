@@ -2,7 +2,7 @@
  * Project: react-boilerplate
  * Author: Duong Le (navi.ocean@outlook.com)
  * File Created: Tuesday, 22nd May 2018 11:31:28 pm
- * Last Modified: Saturday, 2nd June 2018 9:12:51 am
+ * Last Modified: Tuesday, 12th June 2018 2:55:09 pm
  */
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
@@ -83,9 +83,7 @@ class ForgotComponent extends Component {
                     onloadCallback={this.callback}
                     expiredCallback={this.expiredCallback}
                     name="recaptcha"
-                  >
-                    <Button onClick={this.resetRecaptcha} />
-                  </Recaptcha>
+                  />
                 </AvGroup>
                 <Button
                   className="button-light full-width"
@@ -111,4 +109,5 @@ const mapDispatchToProps = dispatch =>
   },
   dispatch);
 
-export default connect(null, mapDispatchToProps)(ForgotComponent);
+export default connect(null,
+  mapDispatchToProps)(ForgotComponent);

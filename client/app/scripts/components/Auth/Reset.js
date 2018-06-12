@@ -2,7 +2,7 @@
  * Project: react-boilerplate
  * Author: Duong Le (navi.ocean@outlook.com)
  * File Created: Saturday, 2nd June 2018 11:24:13 am
- * Last Modified: Saturday, 2nd June 2018 11:34:00 am
+ * Last Modified: Tuesday, 12th June 2018 2:55:22 pm
  */
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
@@ -101,9 +101,7 @@ class ResetComponent extends Component {
                     onloadCallback={this.callback}
                     expiredCallback={this.expiredCallback}
                     name="recaptcha"
-                  >
-                    <Button onClick={this.resetRecaptcha} />
-                  </Recaptcha>
+                  />
                 </AvGroup>
                 <Button
                   className="button-light full-width"
@@ -129,4 +127,5 @@ const mapDispatchToProps = dispatch =>
   },
   dispatch);
 
-export default connect(null, mapDispatchToProps)(ResetComponent);
+export default connect(null,
+  mapDispatchToProps)(ResetComponent);

@@ -2,7 +2,7 @@
  * Project: react-boilerplate
  * Author: Duong Le (navi.ocean@outlook.com)
  * File Created: Sunday, 20th May 2018 12:20:09 pm
- * Last Modified: Sunday, 3rd June 2018 9:58:37 pm
+ * Last Modified: Tuesday, 12th June 2018 2:54:38 pm
  */
 import React, { PureComponent } from 'react';
 import { connect } from 'react-redux';
@@ -100,9 +100,7 @@ class LoginComponent extends PureComponent {
                     onloadCallback={this.callback}
                     expiredCallback={this.expiredCallback}
                     name="recaptcha"
-                  >
-                    <Button onClick={this.resetRecaptcha} />
-                  </Recaptcha>
+                  />
                 </AvGroup>
                 <Button
                   className="button-light full-width"
@@ -133,4 +131,5 @@ const mapDispatchToProps = dispatch =>
   },
   dispatch);
 
-export default connect(null, mapDispatchToProps)(LoginComponent);
+export default connect(null,
+  mapDispatchToProps)(LoginComponent);

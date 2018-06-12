@@ -2,7 +2,7 @@
  * Project: react-boilerplate
  * Author: Duong Le (navi.ocean@outlook.com)
  * File Created: Thursday, 12th April 2018 3:16:38 pm
- * Last Modified: Sunday, 10th June 2018 8:51:07 pm
+ * Last Modified: Tuesday, 12th June 2018 9:14:57 pm
  */
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
@@ -95,6 +95,7 @@ class Contact extends Component {
       message,
       recpatcha,
     });
+    this.resetRecaptcha();
     return true;
   };
   verifyCallback = (response) => {

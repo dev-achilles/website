@@ -2,7 +2,7 @@
  * Project: react-boilerplate
  * Author: Duong Le (navi.ocean@outlook.com)
  * File Created: Sunday, 20th May 2018 12:20:09 pm
- * Last Modified: Tuesday, 12th June 2018 2:54:38 pm
+ * Last Modified: Tuesday, 12th June 2018 8:41:33 pm
  */
 import React, { PureComponent } from 'react';
 import { connect } from 'react-redux';
@@ -34,6 +34,7 @@ class LoginComponent extends PureComponent {
     if (errors.length === 0) {
       values.recaptcha = this.state.recaptcha;
       this.props.submitLogin(values);
+      this.resetRecaptcha();
     }
     console.log(
       'errors', errors, 'values', values,

@@ -2,7 +2,7 @@
  * Project: react-boilerplate
  * Author: Duong Le (navi.ocean@outlook.com)
  * File Created: Tuesday, 22nd May 2018 11:31:28 pm
- * Last Modified: Tuesday, 12th June 2018 2:55:09 pm
+ * Last Modified: Tuesday, 12th June 2018 8:42:53 pm
  */
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
@@ -30,6 +30,7 @@ class ForgotComponent extends Component {
     if (errors.length === 0) {
       values.recaptcha = this.state.recaptcha;
       this.props.submitForgot(values);
+      this.resetRecaptcha();
     }
     console.log(
       'errors', errors, 'values', values,

@@ -2,7 +2,7 @@
  * Project: react-boilerplate
  * Author: Duong Le (navi.ocean@outlook.com)
  * File Created: Tuesday, 22nd May 2018 11:26:45 pm
- * Last Modified: Tuesday, 12th June 2018 2:55:30 pm
+ * Last Modified: Tuesday, 12th June 2018 8:42:41 pm
  */
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
@@ -30,6 +30,7 @@ class SignUpComponent extends Component {
     if (errors.length === 0) {
       values.recaptcha = this.state.recaptcha;
       this.props.submitSignUp(values);
+      this.resetRecaptcha();
     }
     console.log(
       'errors', errors, 'values', values,

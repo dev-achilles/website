@@ -10,7 +10,8 @@
 /client/build
 
 # misc
-/*/logs
+/server/logs
+/client/logs
 .DS_Store
 .env.local
 .env.development.local

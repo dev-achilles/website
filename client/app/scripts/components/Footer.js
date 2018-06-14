@@ -31,7 +31,6 @@ class Footer extends Component {
               alt={item.title}
               key={uuidv1()}
               className="btn-icon"
-              onClick={e => this.onChangeRoute(e, item.url)}
             >
               <i className={`fa ${item.icon}`} />
             </a>

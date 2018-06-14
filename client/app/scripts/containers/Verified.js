@@ -2,7 +2,7 @@
  * Project: react-boilerplate
  * Author: Duong Le (navi.ocean@outlook.com)
  * File Created: Wednesday, 23rd May 2018 12:50:35 am
- * Last Modified: Monday, 11th June 2018 1:18:27 pm
+ * Last Modified: Thursday, 14th June 2018 4:25:22 pm
  */
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
@@ -36,7 +36,7 @@ import {
   VerificationStep4,
 } from '../components';
 
-import { fetchSettings } from '../actions';
+import { fetchSettings, fetchUserStatus } from '../actions';
 
 class Verify extends Component {
   constructor(props) {
@@ -50,6 +50,8 @@ class Verify extends Component {
   componentWillMount = () => {
     if (this.props.settings.countries.length === 0 || this.props.settings.cryptos.length === 0) {
       this.props.fetchSettings();
+    } else {
+      this.props.fetchUserStatus();
     }
   };
   componentWillReceiveProps = (nextProps) => {
@@ -200,6 +202,7 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = dispatch =>
   bindActionCreators({
     fetchSettings,
+    fetchUserStatus,
   },
   dispatch);
 export default connect(mapStateToProps,

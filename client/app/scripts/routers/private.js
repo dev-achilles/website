@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 
 const PrivateRoute = ({ component: Component, auth, ...rest }) => {
   const render = (props) => {
+    console.log(props);
     if (!auth.isAuthenticated || auth.status === 0) {
       return (
         <Redirect

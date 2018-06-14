@@ -2,24 +2,39 @@
  * Project: react-boilerplate
  * Author: Duong Le (navi.ocean@outlook.com)
  * File Created: Friday, 20th April 2018 8:01:30 pm
- * Last Modified: Monday, 11th June 2018 2:51:11 pm
+ * Last Modified: Thursday, 14th June 2018 12:04:15 pm
  */
 import { store } from '../store';
-import { RESET } from '../actions/actionTypes';
+import { RESET, UPDATE_USER_STATUS } from '../actions/actionTypes';
 
 const axios = require('axios');
 const _ = require('lodash');
 
-axios.interceptors.response.use(response => response,
-  (error) => {
-    // if 401 unauthorized reset reducers
-    if (error.response.status === 401) {
-      store.dispatch({
-        type: RESET,
-      });
-    }
-    return Promise.reject(error);
-  });
+axios.interceptors.response.use((response) => {
+  if (typeof response.data.data.status !== 'undefined') {
+    store.dispatch({
+      type: UPDATE_USER_STATUS,
+      payload: response.data.data.status,
+    });
+    delete response.data.data.status;
+  }
+  return Promise.resolve(response);
+},
+(error) => {
+  // if 401 unauthorized reset reducers
+  if (error.response.status === 401) {
+    store.dispatch({
+      type: RESET,
+    });
+  } else if (typeof error.response.data.data.status !== 'undefined') {
+    store.dispatch({
+      type: UPDATE_USER_STATUS,
+      payload: error.response.data.data.status,
+    });
+    delete error.response.data;
+  }
+  return Promise.reject(error);
+});
 
 export const getData = url =>
   new Promise((resolve, reject) => {
@@ -36,7 +51,6 @@ export const getData = url =>
       .get(url, config)
       .then(response => resolve(response.data))
       .catch((error) => {
-        console.log(error);
         let data =
           error.response && !_.isEmpty(error.response.data)
             ? error.response.data

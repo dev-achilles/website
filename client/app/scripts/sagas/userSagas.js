@@ -2,7 +2,7 @@
  * Project: react-boilerplate
  * Author: Duong Le (navi.ocean@outlook.com)
  * File Created: Tuesday, 29th May 2018 7:07:16 pm
- * Last Modified: Sunday, 3rd June 2018 3:14:23 pm
+ * Last Modified: Thursday, 14th June 2018 4:18:55 pm
  */
 import { put, takeLatest } from 'redux-saga/effects';
 import {
@@ -14,8 +14,14 @@ import {
   SUBMIT_USER_INFO,
   SUBMIT_USER_PHOTO,
   FETCH_KEYPAIR,
+  FETCH_USER_STATUS,
 } from '../actions/actionTypes';
-import { submitUserInfoApi, submitUserPhotoApi, fetchKeypairApi } from '../services';
+import {
+  submitUserInfoApi,
+  submitUserPhotoApi,
+  fetchKeypairApi,
+  fetchUserStatusApi,
+} from '../services';
 import {
   showLoading,
   hideLoading,
@@ -98,4 +104,25 @@ function* watchFetchKeypair() {
   }
 }
 
-export default [watchSubmitUserInfo, watchSubmitUserPhoto, watchFetchKeypair];
+function* fetchUserStatus(action) {
+  try {
+    yield put(showLoading());
+    const result = yield fetchUserStatusApi();
+    yield put(hideLoading());
+  } catch (error) {
+    yield put(hideLoading());
+    if (error.message) {
+      yield put(showAlert(error.message, { type: 'error' }));
+    }
+  }
+}
+
+function* watchFetchUserStatus() {
+  try {
+    yield takeLatest(FETCH_USER_STATUS, fetchUserStatus);
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+export default [watchSubmitUserInfo, watchSubmitUserPhoto, watchFetchKeypair, watchFetchUserStatus];

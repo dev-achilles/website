@@ -2,7 +2,7 @@
  * Project: react-boilerplate
  * Author: Duong Le (navi.ocean@outlook.com)
  * File Created: Tuesday, 29th May 2018 11:51:36 am
- * Last Modified: Sunday, 3rd June 2018 4:43:02 pm
+ * Last Modified: Thursday, 14th June 2018 4:20:03 pm
  */
 import {
   UPDATE_USER,
@@ -10,6 +10,7 @@ import {
   SUBMIT_USER_PHOTO,
   FETCH_KEYPAIR,
   SET_KEYPAIR,
+  FETCH_USER_STATUS,
 } from './actionTypes';
 
 export const submitInfo = data => ({
@@ -34,4 +35,8 @@ export const fetchKeypair = () => ({
 export const setKeypair = data => ({
   type: SET_KEYPAIR,
   payload: data,
+});
+
+export const fetchUserStatus = () => ({
+  type: FETCH_USER_STATUS,
 });

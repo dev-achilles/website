@@ -150,7 +150,6 @@ class Home extends Component {
         }
       });
 
-    console.log(this.nav_sections);
     return (
       <div className="home sections">
         <Particles

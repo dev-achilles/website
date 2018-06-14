@@ -2,7 +2,7 @@
  * Project: react-boilerplate
  * Author: Duong Le (navi.ocean@outlook.com)
  * File Created: Wednesday, 23rd May 2018 11:24:43 am
- * Last Modified: Sunday, 3rd June 2018 3:30:35 pm
+ * Last Modified: Thursday, 14th June 2018 11:56:20 am
  */
 
 import {
@@ -14,6 +14,7 @@ import {
   FORGOT_SUCCESS,
   RESET_SUCCESS,
   SET_KEYPAIR,
+  UPDATE_USER_STATUS,
 } from '../actions/actionTypes';
 
 const initialState = {
@@ -39,6 +40,7 @@ export default (state = initialState, action) => {
           private_key: action.payload.private_key,
         },
       };
+
     case LOGIN_SUCCESS:
       return {
         ...state,
@@ -60,6 +62,11 @@ export default (state = initialState, action) => {
       return {
         ...state,
         reset: true,
+      };
+    case UPDATE_USER_STATUS:
+      return {
+        ...state,
+        status: action.payload,
       };
     case UPDATE_USER:
       return {

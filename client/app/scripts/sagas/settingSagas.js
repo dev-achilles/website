@@ -2,7 +2,7 @@
  * Project: react-boilerplate
  * Author: Duong Le (navi.ocean@outlook.com)
  * File Created: Wednesday, 30th May 2018 6:57:02 am
- * Last Modified: Monday, 11th June 2018 2:51:15 pm
+ * Last Modified: Thursday, 14th June 2018 12:00:02 pm
  */
 import { put, takeLatest } from 'redux-saga/effects';
 import { filterData } from '../helpers';
@@ -15,9 +15,7 @@ function* fetchSettings(action) {
   try {
     yield put(showLoading());
     const result = yield getSettingsApi(action.payload);
-    const data = filterData(result);
-    yield put(setSettings(data));
-    if (typeof result.data.user !== 'undefined') yield put(updateUser(result.data.user));
+    yield put(setSettings(result.data));
     yield put(hideLoading());
     // yield put(showAlert(result.message, { type: 'success' }));
   } catch (error) {

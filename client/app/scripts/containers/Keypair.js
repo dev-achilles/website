@@ -2,7 +2,7 @@
  * Project: react-boilerplate
  * Author: Duong Le (navi.ocean@outlook.com)
  * File Created: Saturday, 2nd June 2018 12:42:16 pm
- * Last Modified: Tuesday, 12th June 2018 10:01:50 pm
+ * Last Modified: Thursday, 14th June 2018 4:20:14 pm
  */
 import React, { Component } from 'react';
 import classnames from 'classnames';
@@ -15,13 +15,16 @@ import { CSVLink, CSVDownload } from 'react-csv';
 import { go, push, replace } from 'react-router-redux';
 
 import { Navigation, SideBarComponent, Button } from '../components';
-import { fetchKeypair } from '../actions';
+import { fetchKeypair, fetchUserStatus } from '../actions';
 
 class Keypair extends Component {
   constructor(props) {
     super(props);
     this.state = {};
   }
+  componentWillMount = () => {
+    this.props.fetchUserStatus();
+  };
   _goWallet = () => {
     this.props.goUrl('/wallet');
   };
@@ -215,6 +218,7 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = dispatch => ({
   goUrl: url => dispatch(replace(url)),
   fetchKeypair: () => dispatch(fetchKeypair()),
+  fetchUserStatus: () => dispatch(fetchUserStatus()),
   dispatch,
 });
 export default connect(mapStateToProps,

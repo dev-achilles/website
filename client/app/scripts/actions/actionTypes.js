@@ -2,7 +2,7 @@
  * Project: react-boilerplate
  * Author: Duong Le (navi.ocean@outlook.com)
  * File Created: Sunday, 1st April 2018 8:21:22 pm
- * Last Modified: Sunday, 3rd June 2018 4:42:24 pm
+ * Last Modified: Thursday, 14th June 2018 3:31:22 pm
  */
 export const RESET = 'RESET';
 // Preloader
@@ -58,7 +58,8 @@ export const SUBMIT_USER_INFO = 'SUBMIT_USER_INFO';
 export const SUBMIT_USER_PHOTO = 'SUBMIT_USER_PHOTO';
 export const FETCH_KEYPAIR = 'FETCH_KEYPAIR';
 export const SET_KEYPAIR = 'SET_KEYPAIR';
-
+export const FETCH_USER_STATUS = 'FETCH_USER_STATUS';
+export const UPDATE_USER_STATUS = 'UPDATE_USER_STATUS';
 // wallet
 export const FETCH_WALLET = 'FETCH_WALLET';
 export const SET_WALLET = 'SET_WALLET';

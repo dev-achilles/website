@@ -125,8 +125,8 @@ class SignUpComponent extends Component {
                 By clicking "Sign Up", you agree to our <Link to="/tos">Terms</Link> and that you
                 have read our <Link to="/policy">Privacy Policy</Link>.
               </div>
-              <div className="separate" />
-              <SocialAuth />
+              {/* <div className="separate" />
+              <SocialAuth /> */}
             </div>
           </div>
         </div>

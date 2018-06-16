@@ -2,7 +2,7 @@
  * Project: react-boilerplate
  * Author: Duong Le (navi.ocean@outlook.com)
  * File Created: Tuesday, 29th May 2018 1:20:54 pm
- * Last Modified: Tuesday, 29th May 2018 1:34:53 pm
+ * Last Modified: Saturday, 16th June 2018 3:23:30 pm
  */
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
@@ -59,7 +59,7 @@ class VerificationStep1 extends Component {
             </AvGroup>
             <AvGroup check>
               <Label check>
-                I am not located in the People's Republic of China or I am not a citizen or resident
+                I am not located in the People's Republic of China, NOR am I a citizen or resident
                 (tax or otherwise) of, or domiciled in, the People's Republic of China.
                 <AvInput type="checkbox" name="check2" required />
                 <span className="checkmark" />

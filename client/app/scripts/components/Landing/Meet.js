@@ -2,34 +2,16 @@
  * Project: react-boilerplate
  * Author: Duong Le (navi.ocean@outlook.com)
  * File Created: Sunday, 1st April 2018 4:19:51 am
- * Last Modified: Tuesday, 12th June 2018 1:15:56 pm
+ * Last Modified: Saturday, 16th June 2018 4:00:44 pm
  */
 import React, { Component } from 'react';
 import uuidv1 from 'uuid/v1';
 import ReactHtmlParser from 'react-html-parser';
 import { Row, Col } from 'reactstrap';
-import Swiper from 'react-id-swiper';
 
 export default class Meet extends Component {
   render() {
     const d = Object.assign({ show: false }, this.props.data);
-
-    const params = {
-      spaceBetween: 30,
-      centeredSlides: true,
-      autoplay: {
-        delay: 5000,
-        disableOnInteraction: false,
-      },
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      },
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-    };
 
     const renderContent = () =>
       d.list.map((content, index) => {
@@ -67,9 +49,7 @@ export default class Meet extends Component {
             <Row className="justify-content-center align-items-center">
               <Col md={12} className="mx-auto">
                 <h2 className="section-heading">{d.heading}</h2>
-                <div className="contents">
-                  <Swiper {...params}>{renderContent()}</Swiper>
-                </div>
+                <div className="contents">{renderContent()}</div>
               </Col>
             </Row>
           </div>

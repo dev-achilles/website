@@ -2,7 +2,7 @@
   position: fixed;
   top: 40%;
   z-index: 999;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: $v2-nav-bg; //rgba(0, 0, 0, 0.4);
   padding: 10px 10px 10px 20px;
   @include sm-only {
     display: none;

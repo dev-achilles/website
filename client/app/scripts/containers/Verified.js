@@ -147,12 +147,12 @@ class Verify extends Component {
   _renderInfo = () => (
     <div className="info">
       <p>We will not be accepting US, Chinese & Korean citizens due to legal restrictions.</p>
-      <p>
+      {/* <p>
         Please check out:{' '}
         <a href="https://www.leekICO.com" alt="">
           https://www.leekICO.com
         </a>
-      </p>
+      </p> */}
     </div>
   );
   _renderContent = () => (

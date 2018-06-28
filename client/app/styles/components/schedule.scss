@@ -81,6 +81,14 @@
         text-align: left;
         color: rgba(22, 34, 59, 0.7);
         text-transform: uppercase;
+
+        @include md-only {
+          font-size: 12px;
+          padding: 5px;
+          text-align: center;
+          vertical-align: inherit;
+          line-height: 1.5;
+        }
       }
     }
     tbody {
@@ -91,6 +99,10 @@
         font-weight: 600;
         text-align: left;
         color: #16223b;
+        @include md-only {
+          font-size: 13px;
+          font-weight: 200;
+        }
       }
     }
   }

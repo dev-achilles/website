@@ -42,7 +42,8 @@ const PrivateRoute = ({ component: Component, auth, ...rest }) => {
       auth.status === 5 &&
       (props.match.path === '/verify' ||
         props.match.path === '/login' ||
-        props.match.path === '/signup')
+        props.match.path === '/signup' ||
+        props.match.path === '/keypair')
     ) {
       return (
         <Redirect

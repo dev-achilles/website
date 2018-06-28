@@ -2,7 +2,7 @@
  * Project: react-boilerplate
  * Author: Duong Le (navi.ocean@outlook.com)
  * File Created: Friday, 20th April 2018 8:01:30 pm
- * Last Modified: Thursday, 14th June 2018 12:04:15 pm
+ * Last Modified: Tuesday, 26th June 2018 7:21:14 am
  */
 import { store } from '../store';
 import { RESET, UPDATE_USER_STATUS } from '../actions/actionTypes';
@@ -22,6 +22,7 @@ axios.interceptors.response.use((response) => {
 },
 (error) => {
   // if 401 unauthorized reset reducers
+
   if (error.response.status === 401) {
     store.dispatch({
       type: RESET,
@@ -31,7 +32,7 @@ axios.interceptors.response.use((response) => {
       type: UPDATE_USER_STATUS,
       payload: error.response.data.data.status,
     });
-    delete error.response.data;
+    delete error.response.data.data;
   }
   return Promise.reject(error);
 });

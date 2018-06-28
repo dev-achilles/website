@@ -2,74 +2,46 @@
  * Project: react-boilerplate
  * Author: Duong Le (navi.ocean@outlook.com)
  * File Created: Saturday, 14th April 2018 12:48:26 pm
- * Last Modified: Saturday, 14th April 2018 4:04:24 pm
+ * Last Modified: Wednesday, 20th June 2018 6:13:33 am
  */
 import React, { Component } from 'react';
+import { bindActionCreators } from 'redux';
 import { Button } from 'reactstrap';
 import { connect } from 'react-redux';
 import { goBack } from 'react-router-redux';
 import ReactHtmlParser from 'react-html-parser';
-
-import { Navigation } from '../components';
+import _ from 'lodash';
+import { fetchPage } from '../actions';
+import { Navigation, Error } from '../components';
 
 class Page extends Component {
   constructor(props) {
     super(props);
-    this.data = {
-      header: {
-        button: {
-          text: 'JOIN PRE-SALE NOW',
-          show: true,
-          link: '#',
-        },
-        show: true,
-        title: 'HAWKING',
-        nav: [
-          {
-            title: 'Whitepaper',
-            url: '#',
-          },
-          {
-            title: 'Crowdsale',
-            url: '#',
-          },
-          {
-            title: 'Road Map',
-            url: '#',
-          },
-        ],
-      },
-      page: {
-        title: 'Lorem Ipsum',
-        content: `<ul>
-        <li>Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu. Cras consequat.</li>
-        <li>Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus.</li>
-        <li>Phasellus ultrices nulla quis nibh. Quisque a lectus. Donec consectetuer ligula vulputate sem tristique cursus. Nam nulla quam, gravida non, commodo a, sodales sit amet, nisi.</li>
-        <li>Pellentesque fermentum dolor. Aliquam quam lectus, facilisis auctor, ultrices ut, elementum vulputate, nunc.</li>
-     </ul>`,
-        seo: {
-          title: 'Lorem Ipsum',
-          description: 'Lorem Ipsum',
-          og: {
-            title: 'Lorem Ipsum',
-            description: 'Lorem Ipsum',
-          },
-        },
-      },
-    };
+    this.slug = this.props.match.params.slug;
   }
-  goback = () => {
-    this.props.goBack();
+
+  componentWillMount = () => {
+    this.props.fetchPage(this.slug);
   };
+
   render() {
+    if (_.isEmpty(this.props.items)) {
+      if (this.props.fetching) {
+        return <div />;
+      }
+      return <Error />;
+    }
+
+    const page = _.find(this.props.items, { slug: this.slug });
+
     return (
-      <div className="page" id="page">
-        <Navigation isPage data={this.data.header} />
+      <div className="page" id="page-common">
+        <Navigation isHome />
         <div className="container">
           <div className="row">
             <div className="col-md-10 mx-auto align-items-center justify-content-center">
-              <h2 className="section-heading">{this.data.page.title}</h2>
-              <div className="content">{ReactHtmlParser(this.data.page.content)}</div>
+              <h2 className="section-heading">{page.title}</h2>
+              <div className="content">{ReactHtmlParser(page.content)}</div>
             </div>
           </div>
         </div>
@@ -78,8 +50,14 @@ class Page extends Component {
   }
 }
 
-const mapDispatchToProps = dispatch => ({
-  goBack: () => dispatch(goBack()),
-  dispatch,
+const mapStateToProps = state => ({
+  ...state.page,
 });
-export default connect(null, mapDispatchToProps)(Page);
+const mapDispatchToProps = dispatch =>
+  bindActionCreators({
+    fetchPage,
+  },
+  dispatch);
+
+export default connect(mapStateToProps,
+  mapDispatchToProps)(Page);

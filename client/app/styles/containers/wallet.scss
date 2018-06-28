@@ -66,6 +66,12 @@
     }
     .transactions {
       margin-top: 60px;
+      .transactions-info {
+        @include sm-only {
+          margin-left: -10px;
+          margin-right: -10px;
+        }
+      }
       .table {
         thead {
           th {
@@ -75,36 +81,137 @@
             font-family: $font-ti;
             font-size: 16px;
             color: rgba(22, 34, 59, 0.7);
+            vertical-align: inherit;
+            @include md-only {
+              font-size: 12px;
+              padding: 5px;
+              text-align: center;
+            }
+            .unit {
+              padding: 0;
+              font-size: 14px;
+              text-align: center;
+              color: rgba(22, 34, 59, 0.7);
+              margin-bottom: 0;
+              line-height: 1;
+              @include md-only {
+                font-size: 11px;
+              }
+            }
           }
         }
         tbody {
           padding: 18px;
-          td,
-          th {
-            padding: 30px 0px 30px 0px;
-            font-family: $font-ti;
-            font-size: 20px;
-            font-weight: bold;
+          tr {
+            td,
+            th {
+              padding: 30px 0px 30px 12px;
+              font-family: $font-ti;
+              font-size: 20px;
+              font-weight: bold;
+              @include md-only {
+                font-size: 13px;
+                font-weight: 200;
+              }
+              @include sm-only {
+                padding: 30px 0px 30px 3px;
+              }
+            }
+          }
+
+          .selected {
+            background-color: rgba(0, 0, 0, 0.075);
+          }
+          .full {
+            &.selected {
+              td {
+                border-top: 1px solid #e1e1e1;
+              }
+            }
+            td {
+              padding: 0;
+              border: none;
+            }
+            p {
+              color: #212529;
+            }
+            .more-info {
+              display: flex;
+              flex-direction: row;
+              font-weight: 300;
+              line-height: 2;
+              align-items: center;
+              font-size: 16px;
+              padding-left: 20px;
+              .label {
+                font-size: 16px;
+                font-weight: 600;
+                width: 135px;
+              }
+              @include md-only {
+                font-size: 13px;
+                .label {
+                  font-size: 13px;
+                  width: 120px;
+                }
+              }
+              @include sm-only {
+                padding-left: 10px;
+              }
+            }
           }
         }
-
+        button {
+          border-color: #e1e1e1;
+          background-color: #fff;
+          height: 36px;
+          padding: 5px 18px;
+          i {
+            color: #3d60a6;
+          }
+          .button-text {
+            color: #3d60a6;
+            font-family: $font-ti;
+            font-size: 16px;
+            font-weight: 600;
+          }
+          @include md-only {
+            padding: 2px 6px;
+            margin-left: 2px;
+          }
+        }
+        .status {
+          text-transform: capitalize;
+          font-weight: 600;
+        }
         .type {
           font-family: $font-ti;
           font-size: 40px;
+          padding-left: 0.75rem;
           &.up {
             color: #1cb266;
           }
           &.down {
             color: #f84444;
           }
+          @include md-only {
+            font-weight: 200;
+            font-size: 30px;
+          }
         }
-        .pedding {
+        .unconfirmed {
+          color: $dark-color;
+        }
+        .denied {
+          color: #f84444;
+        }
+        .pending {
           color: #137ae2;
         }
-        .confirmed {
+        .completed {
           color: #1cb266;
         }
-        .inprogress {
+        .in-progress {
           color: #8919d1;
         }
       }

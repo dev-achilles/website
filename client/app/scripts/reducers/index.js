@@ -2,7 +2,7 @@
  * Project: react-boilerplate
  * Author: Duong Le (navi.ocean@outlook.com)
  * File Created: Thursday, 29th March 2018 11:10:48 am
- * Last Modified: Sunday, 3rd June 2018 4:40:50 pm
+ * Last Modified: Sunday, 24th June 2018 11:59:42 pm
  */
 import { routerReducer } from 'react-router-redux';
 
@@ -16,6 +16,10 @@ import contact from './contactReducer';
 import auth from './authReducer';
 import user from './userReducer';
 import wallet from './walletReducer';
+import page from './pageReducer';
+import dashboard from './dashboardReducer';
+import transaction from './transactionReducer';
+import addAddress from './addAddressReducer';
 
 const reducer = {
   seo,
@@ -29,6 +33,10 @@ const reducer = {
   auth,
   user,
   wallet,
+  page,
+  dashboard,
+  transaction,
+  addAddress,
 };
 
 export default reducer;

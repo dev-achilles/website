@@ -2,13 +2,12 @@
  * Project: react-boilerplate
  * Author: Duong Le (navi.ocean@outlook.com)
  * File Created: Sunday, 1st April 2018 8:26:06 pm
- * Last Modified: Thursday, 14th June 2018 12:05:01 pm
+ * Last Modified: Wednesday, 20th June 2018 12:46:50 am
  */
 import { put, takeLatest } from 'redux-saga/effects';
 import { filterData } from '../helpers';
 import {
   FETCH_HOME,
-  FETCH_HOME_INPROCESS,
   FETCH_HOME_SUCCESS,
   FETCH_HOME_FAILED,
   SHOW_PRELOADER,
@@ -25,13 +24,12 @@ function* fetchHome() {
   try {
     // fetch movies from api
     yield put(showPreLoader());
-    yield put({ type: FETCH_HOME_INPROCESS });
     const result = yield getHomeFromApi();
     yield put({ type: FETCH_HOME_SUCCESS, payload: result.data });
-    if (result.data.data && result.data.data.settings) {
-      yield put({ type: SET_TITLE, payload: result.data.data.settings.title });
-      yield put({ type: SET_DESC, payload: result.data.data.settings.description });
-      yield put({ type: SET_OG, payload: result.data.data.settings.og });
+    if (result.data.data && result.data.data.seo) {
+      yield put({ type: SET_TITLE, payload: result.data.data.seo.title });
+      yield put({ type: SET_DESC, payload: result.data.data.seo.description });
+      yield put({ type: SET_OG, payload: result.data.data.seo.og });
     }
 
     yield put(hidePreLoader());

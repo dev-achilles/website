@@ -2,7 +2,7 @@
  * Project: react-boilerplate
  * Author: Duong Le (navi.ocean@outlook.com)
  * File Created: Tuesday, 29th May 2018 1:20:54 pm
- * Last Modified: Saturday, 16th June 2018 3:23:30 pm
+ * Last Modified: Wednesday, 20th June 2018 6:22:36 am
  */
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
@@ -51,8 +51,8 @@ class VerificationStep1 extends Component {
           >
             <AvGroup check>
               <Label check>
-                I agree to the Hawking <Link to="/tos">Terms & Conditions</Link> andx{' '}
-                <Link to="/privacy">Privacy Policy</Link>
+                I agree to the Hawking <Link to="/page/tos">Terms & Conditions</Link> andx{' '}
+                <Link to="/page/privacy">Privacy Policy</Link>
                 <AvInput type="checkbox" name="check1" required />
                 <span className="checkmark" />
               </Label>

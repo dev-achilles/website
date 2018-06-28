@@ -2,7 +2,7 @@
  * Project: react-boilerplate
  * Author: Duong Le (navi.ocean@outlook.com)
  * File Created: Wednesday, 23rd May 2018 11:19:47 am
- * Last Modified: Sunday, 3rd June 2018 5:04:46 pm
+ * Last Modified: Wednesday, 20th June 2018 12:32:05 am
  */
 import React, { Component } from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
@@ -41,6 +41,7 @@ class Router extends Component {
             <Route path="/forgot" component={Forgot} />
             <Route path="/reset-password/:code" component={Reset} />
             <Route path="/contact" component={Contact} />
+            <Route path="/page/:slug" component={Page} />
             <PrivateRoute path="/verify" component={Verified} />
             <PrivateRoute path="/keypair" component={Keypair} />
             <PrivateRoute path="/dashboard" component={Dashboard} />

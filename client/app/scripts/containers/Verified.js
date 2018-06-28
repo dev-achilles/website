@@ -2,7 +2,7 @@
  * Project: react-boilerplate
  * Author: Duong Le (navi.ocean@outlook.com)
  * File Created: Wednesday, 23rd May 2018 12:50:35 am
- * Last Modified: Thursday, 14th June 2018 4:25:22 pm
+ * Last Modified: Monday, 18th June 2018 8:09:34 am
  */
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
@@ -96,7 +96,7 @@ class Verify extends Component {
       <NavItem className={classnames({ active: this.state.activeTab >= '1' })}>
         <NavLink
           onClick={() => {
-            // this.toggle('1');
+            this.toggle('1');
           }}
         >
           1
@@ -105,7 +105,9 @@ class Verify extends Component {
       <NavItem className={classnames({ active: this.state.activeTab >= '2' })}>
         <NavLink
           onClick={() => {
-            // this.toggle('2');
+            if (this.props.auth.status >= 2) {
+              this.toggle('3');
+            }
           }}
         >
           2
@@ -114,7 +116,9 @@ class Verify extends Component {
       <NavItem className={classnames({ active: this.state.activeTab >= '3' })}>
         <NavLink
           onClick={() => {
-            // this.toggle('3');
+            if (this.props.auth.status >= 3) {
+              this.toggle('3');
+            }
           }}
         >
           3

@@ -1,0 +1,97 @@
+.schedule-item {
+  margin-top: 27px;
+  &:first {
+    margin-top: 0;
+  }
+  box-shadow: 0px 4px 7px 0 rgba(0, 0, 0, 0.06);
+  background-color: #ffffff;
+  border: solid 1px #f3f3f3;
+  .schedule-item-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 57px;
+    background-color: #f4f4f4;
+    border: solid 1px #f3f3f3;
+    padding-left: 19px;
+    padding-right: 19px;
+    .schedule-item-header-left {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      h6 {
+        font-family: $font-ti;
+        font-size: 16px;
+        font-weight: 600;
+        text-align: left;
+        color: #16223b;
+        text-transform: uppercase;
+        margin: 0;
+      }
+      .dot {
+        margin-left: 10px;
+        margin-right: 10px;
+        height: 4px;
+        width: 4px;
+        border: 4px;
+        background-color: #3d60a6;
+      }
+      .schedule-status {
+        font-family: $font-ti;
+        text-transform: capitalize;
+        font-size: 16px;
+        font-weight: 600;
+        text-align: left;
+        &.opening {
+          color: #1cb266;
+        }
+        &.queued {
+          color: #f84444;
+        }
+
+        &.closed {
+          color: black;
+        }
+      }
+    }
+    .schedule-item-header-right {
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      width: 137px;
+      button {
+        height: 36px;
+        width: 137px;
+        padding: 6px 21px;
+        .button-text {
+          font-size: 14px;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+  .table {
+    thead {
+      th {
+        border-bottom: none;
+        border-top: none;
+        font-family: $font-ti;
+        font-size: 14px;
+        text-align: left;
+        color: rgba(22, 34, 59, 0.7);
+        text-transform: uppercase;
+      }
+    }
+    tbody {
+      td {
+        border-top: none;
+        font-family: $font-ti;
+        font-size: 20px;
+        font-weight: 600;
+        text-align: left;
+        color: #16223b;
+      }
+    }
+  }
+}

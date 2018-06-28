@@ -1,0 +1,32 @@
+/*
+ * Project: react-boilerplate
+ * Author: Duong Le (navi.ocean@outlook.com)
+ * File Created: Thursday, 21st June 2018 7:47:53 am
+ * Last Modified: Friday, 22nd June 2018 8:03:07 am
+ */
+.page-dashboard {
+  .content {
+    flex: 1;
+    max-width: 100%;
+    h3 {
+      font-family: $font-ti;
+      font-size: 24px;
+      font-weight: 600;
+      text-align: left;
+      color: $v2-heading;
+      margin-bottom: 23px;
+    }
+    .summary {
+      margin-bottom: 70px;
+      @include sm-only {
+        margin-bottom: 20px;
+      }
+    }
+    .schedule {
+      margin-bottom: 70px;
+      @include sm-only {
+        margin-bottom: 20px;
+      }
+    }
+  }
+}

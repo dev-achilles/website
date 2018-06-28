@@ -1,0 +1,179 @@
+.page-account {
+  .content {
+    flex: 1;
+    max-width: 100%;
+    padding: 57px 70px;
+    @include sm-only {
+      padding: 10px;
+    }
+    h3 {
+      font-family: $font-ti;
+      font-size: 20px;
+      font-weight: 600;
+      text-align: left;
+      color: $v2-heading;
+      margin-bottom: 23px;
+    }
+
+    .account {
+      .password {
+        flex-direction: row;
+        display: flex;
+        button {
+          background-color: #fff;
+          border-color: #ebebeb;
+          .button-text {
+            color: #3d60a6;
+          }
+        }
+      }
+      .card {
+        button {
+          height: 46px;
+          padding: 8px 22px;
+          margin-right: 20px;
+        }
+      }
+      label {
+        font-family: $font-ti;
+        font-size: 16px;
+        font-weight: 600;
+        text-align: left;
+        color: #000000;
+        margin-bottom: 12px;
+      }
+      input {
+        height: 46px;
+        padding: 6px 9px;
+        border: none;
+        border-radius: 0;
+        background-color: #f4f4f4;
+        border-radius: 0;
+        font-family: $font-ti;
+        font-size: 16px;
+        color: $v2-heading;
+        &::placeholder {
+          color: rgba(22, 34, 59, 0.4);
+          opacity: 0.4;
+        }
+        &.is-invalid {
+          border-color: $v2-orange;
+          & ~ .wrap-upload-image {
+            border-color: $v2-orange;
+          }
+        }
+      }
+    }
+    .hawking {
+      margin-top: 44px;
+      @include sm-only {
+        margin-top: 20px;
+      }
+      .hawking-qr {
+        max-width: 140px;
+      }
+      .hawking-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: #f4f4f4;
+        padding: 14px 18px;
+        p {
+          color: #000;
+          font-family: $font-ti;
+          font-size: 16px;
+          text-align: center;
+          margin-bottom: 0;
+        }
+
+        input {
+          font-family: $font-ti;
+          font-size: 18px;
+          color: #000;
+          background-color: #fff;
+          border-radius: 0;
+        }
+      }
+    }
+
+    .wallets {
+      margin-top: 44px;
+      @include sm-only {
+        margin-top: 20px;
+      }
+      .wallets-content {
+        box-shadow: 0px 4px 7px 0 rgba(0, 0, 0, 0.06);
+        background-color: #ffffff;
+        border: solid 1px #f3f3f3;
+      }
+      .wallets-header {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        height: 57px;
+        background-color: #f4f4f4;
+        border: solid 1px #f3f3f3;
+        padding-left: 19px;
+        padding-right: 19px;
+        h3 {
+          margin-bottom: 0;
+        }
+        margin-bottom: 23px;
+        button {
+          height: 36px;
+          width: 137px;
+          padding: 6px 21px;
+          .button-text {
+            font-size: 14px;
+            font-weight: 600;
+          }
+        }
+      }
+      .wallets-body {
+        .table {
+          thead {
+            th {
+              border-bottom: none;
+              border-top: none;
+              font-family: $font-ti;
+              font-size: 14px;
+              text-align: left;
+              color: rgba(22, 34, 59, 0.7);
+              text-transform: uppercase;
+            }
+          }
+          tbody {
+            td {
+              border-top: none;
+              font-family: $font-ti;
+              font-size: 20px;
+              font-weight: 600;
+              text-align: left;
+              color: #16223b;
+              input {
+                border-radius: 0;
+                background-color: #f4f4f4;
+              }
+              button {
+                height: 36px;
+                width: 137px;
+                padding: 6px 21px;
+                background-color: $v2-orange;
+                border-color: $v2-orange;
+                .button-text {
+                  font-size: 14px;
+                  font-weight: 600;
+                }
+                i {
+                  font-size: 20px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -2,7 +2,7 @@
  * Project: react-boilerplate
  * Author: Duong Le (navi.ocean@outlook.com)
  * File Created: Sunday, 1st April 2018 9:46:16 pm
- * Last Modified: Sunday, 10th June 2018 8:48:59 pm
+ * Last Modified: Tuesday, 19th June 2018 10:57:53 pm
  */
 import React, { Component } from 'react';
 import { Button } from 'reactstrap';
@@ -38,7 +38,7 @@ class Contact extends Component {
     const d = this.props.contact.data;
     return (
       <div className="page-contact" id="page-contact">
-        <Navigation isHome data={d.header} />
+        <Navigation isHome />
         <ContactComponent data={d.contact} display />
         <Footer data={d.footer} />
       </div>

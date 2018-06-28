@@ -2,7 +2,7 @@
  * Project: react-boilerplate
  * Author: Duong Le (navi.ocean@outlook.com)
  * File Created: Saturday, 2nd June 2018 12:42:16 pm
- * Last Modified: Thursday, 14th June 2018 4:20:14 pm
+ * Last Modified: Monday, 18th June 2018 8:03:37 am
  */
 import React, { Component } from 'react';
 import classnames from 'classnames';
@@ -125,8 +125,8 @@ class Keypair extends Component {
         <div>
           <div className="keypair">
             <div className="memo">
-              Keep your key secure. This secret key will only be showed to you once. StellarTerm
-              does not save it and will not be able to help you recover it if lost.
+              Keep your key secure. This secret key will only be showed to you once. Hawking does
+              not save it and will not be able to help you recover it if lost.
             </div>
             <div className="info form-group">
               <i className="fa fa-unlock" />

@@ -2,7 +2,7 @@
  * Project: react-boilerplate
  * Author: Duong Le (navi.ocean@outlook.com)
  * File Created: Wednesday, 23rd May 2018 12:50:12 am
- * Last Modified: Sunday, 3rd June 2018 3:44:02 pm
+ * Last Modified: Thursday, 21st June 2018 1:58:17 pm
  */
 import React, { Component } from 'react';
 import { Button, Col } from 'reactstrap';
@@ -20,11 +20,11 @@ export class SideBar extends Component {
   render() {
     const { active } = this.props;
     return (
-      <Col sm="4" className="sidebar" id="sidebar">
+      <Col sm={4} className="sidebar" id="sidebar">
         <div className="items">
-          {/* <Link to="/dashboard" className={classnames({ active: active === 'dashboard' })}>
+          <Link to="/dashboard" className={classnames({ active: active === 'dashboard' })}>
             <i className="fa fa-home" />Dashboard
-          </Link> */}
+          </Link>
           <Link to="/wallet" className={classnames({ active: active === 'wallet' })}>
             <i className="fa fa-credit-card" />Wallet
           </Link>

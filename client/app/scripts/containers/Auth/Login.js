@@ -2,7 +2,7 @@
  * Project: react-boilerplate
  * Author: Duong Le (navi.ocean@outlook.com)
  * File Created: Sunday, 20th May 2018 10:11:23 am
- * Last Modified: Monday, 11th June 2018 1:18:03 pm
+ * Last Modified: Friday, 22nd June 2018 8:05:25 am
  */
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
@@ -20,7 +20,7 @@ export class Login extends Component {
     super(props);
   }
   componentWillMount = () => {
-    if (this.props.status > 0 && this.props.isAuthenticated) this.props.replaceRoute('/wallet');
+    if (this.props.status > 0 && this.props.isAuthenticated) this.props.replaceRoute('/dashboard');
   };
 
   componentWillReceiveProps = (nextProps) => {
@@ -29,7 +29,7 @@ export class Login extends Component {
       nextProps.status > 0 &&
       nextProps.isAuthenticated
     ) {
-      this.props.replaceRoute('/wallet');
+      this.props.replaceRoute('/dashboard');
     }
   };
 

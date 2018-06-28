@@ -1,0 +1,20 @@
+#page-common {
+  position: relative;
+  //   min-height: 900px;
+  margin-top: 80px;
+  // height: 900px;
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  .section-heading {
+    text-align: center;
+    font-family: $font-ti;
+  }
+  .content {
+    margin-top: 30px;
+    padding: 0;
+
+    color: white;
+    font-family: $font-ti;
+  }
+}

@@ -2,7 +2,7 @@
  * Project: react-boilerplate
  * Author: Duong Le (navi.ocean@outlook.com)
  * File Created: Thursday, 29th March 2018 11:10:40 am
- * Last Modified: Thursday, 14th June 2018 4:24:24 pm
+ * Last Modified: Thursday, 28th June 2018 6:12:59 am
  */
 import { applyMiddleware, createStore, compose, combineReducers } from 'redux';
 import createSagaMiddleware from 'redux-saga';
@@ -21,7 +21,7 @@ const sagaMiddleware = createSagaMiddleware();
 const config = {
   key: 'root',
   storage,
-  whitelist: ['app', 'home', 'contact', 'auth', 'user', 'settings'],
+  whitelist: ['app', 'home', 'contact', 'auth', 'user', 'settings', 'transaction'],
   transforms: [createWhitelistFilter('auth', ['isAuthenticated', 'status', 'token'])],
 };
 const middleware = [sagaMiddleware, routerMiddleware(history)];

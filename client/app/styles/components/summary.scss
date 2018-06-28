@@ -1,0 +1,45 @@
+.wrap-summary-item {
+  @include sm-only {
+    justify-content: center;
+  }
+}
+.summary-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 218px;
+  height: 77px;
+  border: 1px solid #f3f3f3;
+  box-shadow: 0px 4px 7px 0 rgba(0, 0, 0, 0.06);
+  padding: 19px 17px;
+  @include lg-only {
+    margin-top: 20px;
+  }
+  h5 {
+    font-family: $font-ti;
+    font-weight: 600;
+    font-size: 24px;
+    margin-bottom: 0;
+    line-height: 1;
+  }
+  p {
+    margin-top: 16px;
+    margin-bottom: 0;
+    font-family: $font-ti;
+    font-size: 16px;
+    color: #16223b;
+    line-height: 1;
+  }
+  &.invest {
+    color: #137ae2;
+  }
+  &.contrib {
+    color: #f0d01e;
+  }
+  &.available {
+    color: #1cb266;
+  }
+  &.sold {
+    color: #f84444;
+  }
+}

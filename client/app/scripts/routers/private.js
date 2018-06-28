@@ -38,11 +38,16 @@ const PrivateRoute = ({ component: Component, auth, ...rest }) => {
       );
     }
 
-    if (auth.status === 5 && props.match.path === '/verify') {
+    if (
+      auth.status === 5 &&
+      (props.match.path === '/verify' ||
+        props.match.path === '/login' ||
+        props.match.path === '/signup')
+    ) {
       return (
         <Redirect
           to={{
-            pathname: '/wallet',
+            pathname: '/dashboard',
             state: { from: props.location },
           }}
         />

@@ -2,7 +2,7 @@
  * Project: react-boilerplate
  * Author: Duong Le (navi.ocean@outlook.com)
  * File Created: Thursday, 29th March 2018 5:59:46 pm
- * Last Modified: Sunday, 10th June 2018 10:20:29 pm
+ * Last Modified: Sunday, 24th June 2018 8:09:40 pm
  */
 import Navigation from './Navigation';
 import Intro from './Landing/Intro';
@@ -38,6 +38,12 @@ import VerificationStep4 from './Auth/Step4';
 import SideBarComponent from './Sidebar';
 import NavSections from './Landing/NavSection';
 
+import ScheduleItem from './Schedule';
+import SummaryItem from './Summary';
+
+import BuyToken from './BuyToken/index.js';
+import AddAddress from './AddAdress';
+
 export {
   Navigation,
   Intro,
@@ -71,4 +77,8 @@ export {
   VerificationStep2,
   VerificationStep3,
   VerificationStep4,
+  ScheduleItem,
+  SummaryItem,
+  BuyToken,
+  AddAddress,
 };

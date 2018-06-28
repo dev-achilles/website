@@ -80,7 +80,7 @@ class Home extends Component {
       x.sorted.map((section) => {
         switch (section.section) {
           case 'header':
-            return <Navigation isHome data={x.header} key={uuidv1()} />;
+            return <Navigation isHome key={uuidv1()} />;
           case 'intro':
             return (
               <Element name={section.section} key={uuidv1()}>

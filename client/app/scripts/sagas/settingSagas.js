@@ -2,7 +2,7 @@
  * Project: react-boilerplate
  * Author: Duong Le (navi.ocean@outlook.com)
  * File Created: Wednesday, 30th May 2018 6:57:02 am
- * Last Modified: Thursday, 14th June 2018 12:00:02 pm
+ * Last Modified: Saturday, 23rd June 2018 4:50:15 pm
  */
 import { put, takeLatest } from 'redux-saga/effects';
 import { filterData } from '../helpers';

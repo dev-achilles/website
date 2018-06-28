@@ -23,6 +23,13 @@
   &.button-light {
     background-color: $v2-blue-light;
   }
+  &.button-white {
+    background-color: #fff;
+    border-color: #ebebeb;
+    .button-text {
+      color: #3d60a6;
+    }
+  }
   &.button-icon {
     padding: 8px 20px;
   }

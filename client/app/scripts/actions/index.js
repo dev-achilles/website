@@ -2,7 +2,7 @@
  * Project: react-boilerplate
  * Author: Duong Le (navi.ocean@outlook.com)
  * File Created: Thursday, 29th March 2018 11:10:57 am
- * Last Modified: Sunday, 3rd June 2018 4:42:55 pm
+ * Last Modified: Saturday, 23rd June 2018 4:43:16 pm
  */
 export * from './homeActions';
 export * from './preLoaderActions';
@@ -15,3 +15,6 @@ export * from './authActions';
 export * from './userActions';
 export * from './settingActions';
 export * from './walletActions';
+export * from './pageActions';
+export * from './dashboardActions';
+export * from './transactionActions';

@@ -2,7 +2,7 @@
  * Project: react-boilerplate
  * Author: Duong Le (navi.ocean@outlook.com)
  * File Created: Friday, 20th April 2018 7:54:52 pm
- * Last Modified: Saturday, 21st April 2018 8:33:12 am
+ * Last Modified: Tuesday, 19th June 2018 8:01:46 am
  */
 import { put, takeLatest } from 'redux-saga/effects';
 import {
@@ -29,10 +29,10 @@ function* fetchContact() {
     const data = yield getContactFromApi();
     yield put({ type: FETCH_CONTACT_SUCCESS, payload: data.data });
 
-    if (data.data && data.data.settings) {
-      yield put({ type: SET_TITLE, payload: data.data.settings.title });
-      yield put({ type: SET_DESC, payload: data.data.settings.description });
-      yield put({ type: SET_OG, payload: data.data.settings.og });
+    if (data.data && data.data.seo) {
+      yield put({ type: SET_TITLE, payload: data.data.seo.title });
+      yield put({ type: SET_DESC, payload: data.data.seo.description });
+      yield put({ type: SET_OG, payload: data.data.seo.og });
     }
 
     yield put(hidePreLoader());

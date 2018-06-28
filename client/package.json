@@ -12,6 +12,7 @@
     "lodash": "^4.17.5",
     "moment": "^2.22.2",
     "prop-types": "^15.6.1",
+    "qrcode.react": "^0.8.0",
     "react": "^16.2.0",
     "react-csv": "^1.0.14",
     "react-dom": "^16.2.0",

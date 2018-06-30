@@ -88,6 +88,10 @@ p {
   padding-bottom: 60px;
   padding-left: 0;
   padding-right: 0;
+  @include sm-only {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
 }
 .col-1,
 .col-2,
@@ -271,8 +275,15 @@ p {
     background-color: rgba(0, 0, 0, 0.5);
   }
 }
+
 .section {
   padding-top: 80px;
+  @include sm-only {
+    padding-top: 40px;
+    &.introduction {
+      padding-top: 80px;
+    }
+  }
 }
 
 .underline {

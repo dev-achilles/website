@@ -2,7 +2,7 @@
  * Project: react-boilerplate
  * Author: Duong Le (navi.ocean@outlook.com)
  * File Created: Tuesday, 29th May 2018 1:27:27 am
- * Last Modified: Thursday, 28th June 2018 2:48:06 pm
+ * Last Modified: Thursday, 28th June 2018 2:53:50 pm
  */
 import React, { Component } from 'react';
 import classnames from 'classnames';
@@ -124,6 +124,7 @@ class Dashboard extends Component {
         <Row className="body">
           <SideBarComponent active="dashboard" />
           <Col sm="12" md="8" lg="8" className="content">
+            {this.renderSummary()}
             {this.renderSchedule()}
             {this.renderYourOrders()}
           </Col>

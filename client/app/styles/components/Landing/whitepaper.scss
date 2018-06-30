@@ -1,9 +1,11 @@
 #whitepaper {
   .whitepaper-body {
     margin-top: 139px;
+
     display: flex;
     @include sm-only {
       flex-direction: column-reverse;
+      margin-top: 10px;
     }
     .whitepaper-info {
       flex: 1;

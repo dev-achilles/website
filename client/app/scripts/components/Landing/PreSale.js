@@ -2,7 +2,7 @@
  * Project: react-boilerplate
  * Author: Duong Le (navi.ocean@outlook.com)
  * File Created: Saturday, 31st March 2018 12:51:53 am
- * Last Modified: Sunday, 1st July 2018 1:41:15 am
+ * Last Modified: Sunday, 1st July 2018 5:52:38 pm
  */
 import React, { Component, Fragment } from 'react';
 import moment from 'moment';
@@ -23,7 +23,7 @@ class PreSale extends Component {
       );
     });
 
-    if (rates) return <div className="section-rate">{rates}</div>;
+    if (rates && data.show_rate) return <div className="section-rate">{rates}</div>;
     return null;
   };
 
@@ -33,11 +33,11 @@ class PreSale extends Component {
       <div className="bonus-item">
         <div className="bonus-percent">+{b.percent}% Bonus</div>
         <div className="bonus-time">
-          {moment(b.startTime).format('DD MMM YYYY')} - {moment(b.endTime).format('DD MMM YYYY')}
+          {moment(b.startTime).format('MMMM Do YYYY')} - {moment(b.endTime).format('MMMM Do YYYY')}
         </div>
       </div>
     ));
-    if (bonus) return <div className="section-bonus">{bonus}</div>;
+    if (bonus && data.show_bonus) return <div className="section-bonus">{bonus}</div>;
     return null;
   };
 
@@ -64,20 +64,18 @@ class PreSale extends Component {
     const endTime = moment(d.endTime);
 
     const countTime = timeNow.isBefore(startTime) ? startTime : endTime;
-    let status = 'Will Live Soon';
-    if (timeNow.isBetween(
-      startTime, endTime, '[]',
-    )) status = 'Is Now LIVE';
-    if (timeNow.isAfter(endTime)) status = 'Is Ended';
+    // let status = 'Will Live Soon';
+    // if (timeNow.isBetween(
+    //   startTime, endTime, '[]',
+    // )) status = 'Is Now LIVE';
+    // if (timeNow.isAfter(endTime)) status = 'Is Ended';
     if (d.show) {
       return (
         <div className="section presale text-center" id="presale">
           <div className="container">
             <div className="row justify-content-center align-items-center">
               <div className="col-md-12 mx-auto">
-                <h2 className="section-heading">
-                  {d.heading} {status}
-                </h2>
+                <h2 className="section-heading">{d.heading}</h2>
                 <div className="section-sub">{ReactHtmlParser(d.sub)}</div>
                 {this._renderStatus()}
                 <CountDown date={countTime.format('MM/DD/YYYY')} />

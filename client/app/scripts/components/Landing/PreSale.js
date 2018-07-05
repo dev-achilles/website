@@ -46,6 +46,9 @@ class PreSale extends Component {
     const timeNow = moment();
     const startTime = moment(data.startTime);
     const endTime = moment(data.endTime);
+    if (!data.show_time) {
+      return null;
+    }
     if (timeNow.isBefore(startTime)) {
       return <h3 className="section-status">Start in {startTime.format('MMMM Do YYYY')}</h3>;
     }
@@ -78,7 +81,7 @@ class PreSale extends Component {
                 <h2 className="section-heading">{d.heading}</h2>
                 <div className="section-sub">{ReactHtmlParser(d.sub)}</div>
                 {this._renderStatus()}
-                <CountDown date={countTime.format('MM/DD/YYYY')} />
+                {d.show_time ? (<CountDown date={countTime.format('MM/DD/YYYY')} />) : null}
                 {this._renderRate()}
                 {this._renderBonus()}
                 {d.button.show ? (

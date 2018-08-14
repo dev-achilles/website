@@ -4,7 +4,7 @@
  * File Created: Monday, 23rd July 2018 10:47:17 pm
  * Author: Navi Ocean (navi.ocean@outlook.com)
  * -----
- * Last Modified: Tuesday, 14th August 2018 9:56:49 pm
+ * Last Modified: Tuesday, 14th August 2018 10:18:30 pm
  * Modified By: Navi Ocean (navi.ocean@outlook.com>)
  * -----
  * Copyright <<projectCreationYear>> - 2018 Hawking LLC, Hawking LLC
@@ -45,7 +45,7 @@ class AirDrop extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      activeTab: '3',
+      activeTab: '1',
     };
   }
   componentWillMount = () => {

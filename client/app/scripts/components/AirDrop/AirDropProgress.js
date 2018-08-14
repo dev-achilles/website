@@ -22,7 +22,7 @@ export default class AirDropProgress extends Component {
           <div className="progress-status">{percent}%</div>
         </Progress>
         <div className="progress-desc">
-          ${asigned} of ${total} has already been asigned
+          ${asigned} of ${total} has already been assigned
         </div>
       </div>
     );

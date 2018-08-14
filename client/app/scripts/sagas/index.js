@@ -2,7 +2,7 @@
  * Project: react-boilerplate
  * Author: Duong Le (navi.ocean@outlook.com)
  * File Created: Thursday, 29th March 2018 11:10:44 am
- * Last Modified: Friday, 22nd June 2018 6:59:55 am
+ * Last Modified: Friday, 10th August 2018 3:55:27 pm
  */
 import { all, call } from 'redux-saga/effects';
 
@@ -16,6 +16,8 @@ import walletSagas from './walletSagas';
 import pageSagas from './pageSagas';
 import dashboardSagas from './dashboardSagas';
 import transactionSagas from './transactionSagas';
+import referralSagas from './referralSagas';
+import airdropSagas from './airdropSagas';
 
 const sagas = [
   ...homeSagas,
@@ -28,6 +30,8 @@ const sagas = [
   ...pageSagas,
   ...dashboardSagas,
   ...transactionSagas,
+  ...referralSagas,
+  ...airdropSagas,
 ];
 
 export default function* root() {

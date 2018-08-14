@@ -1,0 +1,47 @@
+.airdrop-progress {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  @include md-only {
+    align-items: flex-start;
+  }
+  .progress {
+    width: 400px;
+    height: 12px;
+    border-radius: 0;
+    background-color: #e1e1e1;
+    @include md-only {
+      width: 100%;
+    }
+    .progress-bar {
+      background-color: $v2-blue-light;
+      display: flex;
+      align-items: flex-end;
+      .progress-status {
+        position: absolute;
+        height: 37px;
+        width: 37px;
+        border-radius: 37px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $v2-blue-light;
+        font-family: $font-ti;
+        line-height: 1.71;
+        font-size: 14px;
+        margin-left: 17px;
+      }
+    }
+  }
+  .progress-desc {
+    margin-top: 19px;
+    font-family: $font-ti;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.5;
+    text-align: left;
+    color: #16223b;
+  }
+}

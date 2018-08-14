@@ -1,0 +1,97 @@
+.airdrop-invite-tab {
+  .form-group {
+    max-width: 700px;
+  }
+  .airdrop-share {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    @include sm-only {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .airdrop-share-icon {
+      margin-left: 30px;
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: center;
+      .btn-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 37px;
+        width: 37px;
+        min-width: 37px;
+        img {
+          height: 37px;
+          width: 37px;
+        }
+        //   border-radius: 50%;
+        //   background-color: #fff;
+        //   border: 1px solid #f7f7f7;
+        //   box-shadow: 0px 4px 7px 0 rgba(0, 0, 0, 0.06);
+        //   box-sizing: border-box;
+        //   cursor: pointer;
+        //   margin-right: 10px;
+        //   text-decoration: none;
+        //   i {
+        //     text-align: center;
+        //     font-size: 16px;
+        //     color: $v2-nav-bg;
+        //   }
+      }
+    }
+  }
+  .airdrop-invite-statistics {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 90px;
+    .row {
+      .wrap-item {
+        width: 100%;
+        min-width: 126px;
+        min-height: 83px;
+        box-shadow: 0px 4px 7px 0 rgba(0, 0, 0, 0.06);
+        background-color: #ffffff;
+        border: solid 1px #f7f7f7;
+        margin-right: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        font-family: $font-ti;
+        font-size: 16px;
+        line-height: 1.5;
+        text-align: left;
+        color: #16223b;
+        padding: 20px;
+        margin-bottom: 20px;
+        span {
+          font-family: $font-ti;
+          font-size: 24px;
+          font-weight: 600;
+          line-height: 1;
+          text-align: left;
+          margin-bottom: 7px;
+        }
+        &.clicked {
+          span {
+            color: #f7d90f;
+          }
+        }
+        &.signed {
+          span {
+            color: #0fd4f7;
+          }
+        }
+        &.verified {
+          span {
+            color: #1cb266;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,238 @@
+.airdrop-promote-tab {
+  .waiting {
+    .form-group {
+    }
+    .button-left {
+      i {
+        color: $theme-primary;
+      }
+    }
+    .button-text {
+      color: $theme-primary;
+    }
+  }
+  .button-back-icon,
+  .button-guide-icon {
+    background-color: #fff;
+    border: none;
+    .button-left {
+      i {
+        color: $v2-blue-light;
+      }
+    }
+    .button-text {
+      color: $v2-blue-light;
+    }
+    @include sm-only {
+      padding: 8px 10px;
+    }
+  }
+  .button {
+    height: 46px;
+    width: 208px;
+  }
+  .payouts {
+    font-family: $font-ti;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1;
+    text-align: left;
+    .wrap-payout-item {
+      font-family: $font-ti;
+      max-width: 166px;
+      max-height: 94px;
+      box-shadow: 0px 4px 7px 0 rgba(0, 0, 0, 0.06);
+      background-color: #ffffff;
+      border: solid 1px #f4f4f4;
+      padding: 20px 15px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      font-size: 16px;
+      text-transform: uppercase;
+      margin-right: 24px;
+      margin-bottom: 24px;
+      .payout-earn {
+        font-family: $font-ti;
+        font-size: 14px;
+        margin-top: 12px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        font-weight: 300;
+        text-transform: none;
+        line-height: 1.88;
+        strong {
+          font-size: 24px;
+          font-weight: 600;
+          color: #1cb266;
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+
+  .airdrop-promote-bitcointalk {
+    .bitcointalk-add-post {
+      .button {
+        width: 70px;
+      }
+      .account-info {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        i {
+          color: $v2-blue-light;
+          font-size: 20px;
+        }
+        .account {
+          i {
+            margin-right: 3px;
+          }
+          margin-right: 10px;
+        }
+      }
+      .form-group {
+        margin-top: 30px;
+      }
+    }
+    .bitcointalk-promote-form {
+      .button {
+        margin-top: 30px;
+      }
+    }
+
+    .bitcoin-guide {
+      p {
+        font-family: $font-ti;
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 1.5;
+        text-align: left;
+        letter-spacing: normal;
+        color: #16223b;
+        margin-bottom: 0 !important;
+      }
+    }
+    .bitcointalk-promote-form {
+      .form-group {
+        margin-bottom: 0 !important;
+      }
+    }
+    .form-group {
+      max-width: 700px;
+      .form-check {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-bottom: 10px;
+        .form-check-label {
+          font-weight: 300;
+          margin-bottom: 0;
+        }
+        .form-check-input {
+          margin-top: 0;
+          height: auto;
+        }
+      }
+    }
+    .bitcointalk-header {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      img {
+        margin-bottom: 22px;
+        height: 46px;
+        width: 47px;
+      }
+      font-family: $font-ti;
+      font-size: 24px;
+      font-weight: 600;
+      line-height: 1;
+      text-align: left;
+      // margin-bottom: 30px;
+    }
+  }
+
+  .airdrop-promote-twitter {
+    .twitter-add-post {
+      .button {
+        width: 70px;
+      }
+      .account-info {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        i {
+          color: $v2-blue-light;
+          font-size: 20px;
+        }
+        .account {
+          i {
+            margin-right: 3px;
+          }
+          margin-right: 10px;
+        }
+      }
+      .form-group {
+        margin-top: 30px;
+      }
+    }
+    .twitter-promote-form {
+      .button {
+        margin-top: 30px;
+      }
+    }
+
+    .payouts {
+      .wrap-payout-item {
+        max-width: 270px;
+        max-height: 94px;
+      }
+    }
+    .form-group {
+      max-width: 700px;
+    }
+    .twitter-header {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      img {
+        margin-bottom: 22px;
+        height: 37px;
+        width: 37px;
+      }
+      font-family: $font-ti;
+      font-size: 24px;
+      font-weight: 600;
+      line-height: 1;
+      text-align: left;
+      // margin-bottom: 30px;
+    }
+    .twitter-rule {
+      ul {
+        list-style-type: decimal;
+        li {
+          font-family: $font-ti;
+          font-size: 16px;
+          font-weight: 300;
+          line-height: 1.5;
+          text-align: left;
+          color: #16223b;
+        }
+      }
+    }
+    form {
+      margin-top: 47px;
+      &.twitter-add-post {
+        margin-top: 0;
+      }
+    }
+  }
+}

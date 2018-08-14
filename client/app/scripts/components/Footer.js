@@ -26,12 +26,7 @@ class Footer extends Component {
       data.social.map((item) => {
         if (item.url) {
           return (
-            <a
-              href={item.url}
-              alt={item.title}
-              key={uuidv1()}
-              className="btn-icon"
-            >
+            <a href={item.url} alt={item.title} key={uuidv1()} className="btn-icon">
               <i className={`fa ${item.icon}`} />
             </a>
           );

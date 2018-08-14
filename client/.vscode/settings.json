@@ -8,5 +8,21 @@
   // Enable/disable default JavaScript formatter (For Prettier)
   "javascript.format.enable": false,
   // Use 'prettier-eslint' instead of 'prettier'. Other settings will only be fallbacks in case they could not be inferred from eslint rules.
-  "prettier.eslintIntegration": true
+  "prettier.eslintIntegration": true,
+  "psi-header.templates": [
+    {
+      "language": "*",
+      "template": [
+        "File: <<filename>>",
+        "Project: <<projectname>>",
+        "File Created: <<filecreated('dddd, Do MMMM YYYY h:mm:ss a')>>",
+        "Author: <<author>> (<<authoremail>>)",
+        "-----",
+        "Last Modified: <<dateformat('dddd, Do MMMM YYYY h:mm:ss a')>>",
+        "Modified By: <<author>> (<<authoremail>>>)",
+        "-----",
+        "Copyright <<projectCreationYear>> - <<year>> <<copyrightholder>>, <<company>>"
+      ]
+    }
+  ]
 }

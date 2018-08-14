@@ -21,7 +21,7 @@ const sagaMiddleware = createSagaMiddleware();
 const config = {
   key: 'root',
   storage,
-  whitelist: ['app', 'home', 'contact', 'auth', 'user', 'settings', 'transaction'],
+  whitelist: ['app', 'home', 'contact', 'auth', 'user', 'settings', 'transaction', 'referral'],
   transforms: [createWhitelistFilter('auth', ['isAuthenticated', 'status', 'token'])],
 };
 const middleware = [sagaMiddleware, routerMiddleware(history)];

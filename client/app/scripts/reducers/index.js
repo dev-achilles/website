@@ -2,7 +2,7 @@
  * Project: react-boilerplate
  * Author: Duong Le (navi.ocean@outlook.com)
  * File Created: Thursday, 29th March 2018 11:10:48 am
- * Last Modified: Sunday, 24th June 2018 11:59:42 pm
+ * Last Modified: Friday, 10th August 2018 4:01:44 pm
  */
 import { routerReducer } from 'react-router-redux';
 
@@ -20,8 +20,11 @@ import page from './pageReducer';
 import dashboard from './dashboardReducer';
 import transaction from './transactionReducer';
 import addAddress from './addAddressReducer';
+import referral from './referral';
+import airdrop from './airdrop';
 
 const reducer = {
+  airdrop,
   seo,
   settings,
   alerts,
@@ -37,6 +40,7 @@ const reducer = {
   dashboard,
   transaction,
   addAddress,
+  referral,
 };
 
 export default reducer;

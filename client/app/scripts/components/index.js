@@ -41,8 +41,13 @@ import NavSections from './Landing/NavSection';
 import ScheduleItem from './Schedule';
 import SummaryItem from './Summary';
 
-import BuyToken from './BuyToken/index.js';
+import BuyToken from './BuyToken';
 import AddAddress from './AddAdress';
+import AirDropComponent from './AirDrop/AirDropProgress';
+import AirDropInviteTab from './AirDrop/InviteTab';
+import AirDropFollowTab from './AirDrop/FollowTab';
+import AirDropPromoteTab from './AirDrop/PromoteTab';
+import AirDropCreatedTab from './AirDrop/CreatedTab';
 
 export {
   Navigation,
@@ -81,4 +86,9 @@ export {
   SummaryItem,
   BuyToken,
   AddAddress,
+  AirDropComponent,
+  AirDropInviteTab,
+  AirDropFollowTab,
+  AirDropPromoteTab,
+  AirDropCreatedTab,
 };

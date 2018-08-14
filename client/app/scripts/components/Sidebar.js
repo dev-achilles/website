@@ -28,9 +28,9 @@ export class SideBar extends Component {
           <Link to="/wallet" className={classnames({ active: active === 'wallet' })}>
             <i className="fa fa-credit-card" />Wallet
           </Link>
-          {/* <Link to="/airdrop" className={classnames({ active: active === 'airdrop' })}>
+          <Link to="/airdrop" className={classnames({ active: active === 'airdrop' })}>
             <i className="fa fa-link" />AirDrop
-          </Link> */}
+          </Link>
           <Link to="/account" className={classnames({ active: active === 'account' })}>
             <i className="fa fa-user" />Account
           </Link>

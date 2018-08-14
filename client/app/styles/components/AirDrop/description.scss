@@ -1,0 +1,68 @@
+.airdrop-tab-desc {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  .airdrop-tab-desc-step {
+    margin-right: 10px;
+    flex: 1;
+    max-width: 250px;
+    .airdrop-tab-desc-num {
+      display: flex;
+      flex: 1;
+      span {
+        height: 31px;
+        width: 31px;
+        border-radius: 50%;
+        background-color: $v2-blue-light;
+        color: #fff;
+        font-display: $font-ti;
+        font-weight: 600;
+        font-size: 16px;
+        text-align: center;
+        z-index: 999;
+      }
+      position: relative;
+      &::before {
+        content: "";
+        position: absolute;
+        display: block;
+        height: 1px;
+        top: 50%;
+        left: 36px;
+        right: 5px;
+        border-bottom: 1px dashed #b7b7b7;
+      }
+      &.end {
+        &::before {
+          border-bottom: none;
+        }
+      }
+    }
+    .airdrop-tab-desc-content {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      margin-top: 19px;
+      font-family: $font-ti;
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 1.5;
+      text-align: left;
+      color: #16223b;
+      strong {
+        color: #f26522;
+        font-weight: 600;
+      }
+      .airdrop-tab-desc-title {
+        color: #16223b;
+        font-weight: 600;
+        line-height: 1.5;
+        text-align: left;
+        margin-bottom: 11px;
+      }
+    }
+  }
+  margin-bottom: 50px;
+}

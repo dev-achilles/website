@@ -2,7 +2,7 @@
  * Project: react-boilerplate
  * Author: Duong Le (navi.ocean@outlook.com)
  * File Created: Sunday, 1st April 2018 8:21:22 pm
- * Last Modified: Thursday, 28th June 2018 11:44:59 am
+ * Last Modified: Monday, 13th August 2018 5:23:16 pm
  */
 export const RESET = 'RESET';
 // Preloader
@@ -62,7 +62,7 @@ export const FETCH_KEYPAIR = 'FETCH_KEYPAIR';
 export const SET_KEYPAIR = 'SET_KEYPAIR';
 export const FETCH_USER_STATUS = 'FETCH_USER_STATUS';
 export const UPDATE_USER_STATUS = 'UPDATE_USER_STATUS';
-
+export const SET_REFERRAL = 'SET_REFERRAL';
 // wallet
 export const FETCH_WALLET = 'FETCH_WALLET';
 export const SET_WALLET = 'SET_WALLET';
@@ -95,3 +95,18 @@ export const SUBMIT_TRANSACTION = 'SUBMIT_TRANSACTION';
 export const CONFIRM_TRANSACTION = 'CONFIRM_TRANSACTION';
 export const SET_TRANSACTION = 'SET_TRANSACTION';
 export const SET_TRANSACTIONS = 'SET_TRANSACTIONS';
+
+// Airdrop
+export const FETCH_AIRDROP = 'FETCH_AIRDROP';
+export const SET_AIRDROP = 'SET_AIRDROP';
+export const SUBMIT_INVITE_EMAIL = 'SUBMIT_INVITE_EMAIL';
+export const SUBMIT_FOLLOW_TWITTER = 'SUBMIT_FOLLOW_TWITTER';
+export const SUBMIT_FOLLOW_TELEGRAM = 'SUBMIT_FOLLOW_TELEGRAM';
+export const UPDATE_FOLLOW = 'UPDATE_FOLLOW';
+export const JOIN_PROMOTE_TWITTER = 'JOIN_PROMOTE_TWITTER';
+export const ADD_LINK_PROMOTE_TWITTER = 'ADD_LINK_PROMOTE_TWITTER';
+export const JOIN_PROMOTE_BITCOINTALK = 'JOIN_PROMOTE_BITCOINTALK';
+export const ADD_LINK_PROMOTE_BITCOINTALK = 'ADD_LINK_PROMOTE_BITCOINTALK';
+export const UPDATE_PROMOTE = 'UPDATE_PROMOTE';
+export const JOIN_CREATED = 'JOIN_CREATED';
+export const UPDATE_CREATED = 'UPDATE_CREATED';

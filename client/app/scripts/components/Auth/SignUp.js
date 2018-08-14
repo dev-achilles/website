@@ -11,7 +11,7 @@ import { Link } from 'react-router-dom';
 import { Label } from 'reactstrap';
 import { AvForm, AvGroup, AvInput, AvFeedback } from 'availity-reactstrap-validation';
 import Recaptcha from 'react-recaptcha';
-import { submitSignUp } from '../../actions';
+import { submitSignUp, setReferral } from '../../actions';
 import Button from '../Button';
 import SocialAuth from './Social';
 import { recaptcha } from '../../configs';
@@ -23,12 +23,17 @@ class SignUpComponent extends Component {
       recaptcha: '',
     };
   }
+  componentDidMount = () => {
+    if (this.props.clicked && this.props.referral) this.props.setReferral(this.props.referral);
+  };
+
   handleSubmit = async (event, errors, values) => {
     // eslint-disable-next-line
     this.setState({ errors, values });
     if (!this.state.recaptcha) errors.push('recaptcha');
     if (errors.length === 0) {
       values.recaptcha = this.state.recaptcha;
+      values.referral = this.props.referral;
       this.props.submitSignUp(values);
       this.resetRecaptcha();
     }
@@ -137,6 +142,7 @@ class SignUpComponent extends Component {
 const mapDispatchToProps = dispatch =>
   bindActionCreators({
     submitSignUp,
+    setReferral,
   },
   dispatch);
 
